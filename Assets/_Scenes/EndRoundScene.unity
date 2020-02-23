@@ -291,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 4437511203237284751, guid: 7338664723ce8c64aad32de8d6b059e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.13
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 4437511203237284751, guid: 7338664723ce8c64aad32de8d6b059e4,
         type: 3}
@@ -301,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 4437511203237284751, guid: 7338664723ce8c64aad32de8d6b059e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.42
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4437511203237284751, guid: 7338664723ce8c64aad32de8d6b059e4,
         type: 3}
@@ -1377,8 +1377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 283, y: -175}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -211, y: -302.2}
+  m_SizeDelta: {x: 305.4, y: 95.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252815595
 MonoBehaviour:
@@ -1597,6 +1597,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishTailAnimations_Current (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: -4216859302048453862, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1667,11 +1672,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999986
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: 3061514662589243326, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1987,17 +1987,17 @@ PrefabInstance:
     - target: {fileID: 170073853873283488, guid: 8a60e27e25b60c845a0837435bd96d54,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.538654
+      value: -39.7
       objectReference: {fileID: 0}
     - target: {fileID: 170073853873283488, guid: 8a60e27e25b60c845a0837435bd96d54,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.994281
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 170073853873283488, guid: 8a60e27e25b60c845a0837435bd96d54,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.893655
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 170073853873283488, guid: 8a60e27e25b60c845a0837435bd96d54,
         type: 3}
@@ -3073,6 +3073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishTailAnimations_Current (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: -4216859302048453862, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3143,11 +3148,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999998
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: 3061514662589243326, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3748,11 +3748,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1840627176}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
-        type: 3}
-      propertyPath: m_Name
-      value: PineappleAnimations_Current
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3822,6 +3817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
+        type: 3}
+      propertyPath: m_Name
+      value: PineappleAnimations_Current
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
@@ -3930,11 +3930,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 462050138}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
-        type: 3}
-      propertyPath: m_Name
-      value: PineappleAnimations_Current (3)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4005,6 +4000,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3999999
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
+        type: 3}
+      propertyPath: m_Name
+      value: PineappleAnimations_Current (3)
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
       propertyPath: m_Controller
@@ -4065,7 +4065,7 @@ PrefabInstance:
     - target: {fileID: 477755387950561388, guid: 99cf2b344d89440459744e93f557fd7c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 477755387950561388, guid: 99cf2b344d89440459744e93f557fd7c,
         type: 3}
@@ -4233,11 +4233,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1840627176}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_Name
-      value: LettuceAnimations_Current (2)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4308,6 +4303,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_Name
+      value: LettuceAnimations_Current (2)
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_Controller
@@ -4323,11 +4328,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
-    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: -445942121879649074, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_RootOrder
@@ -5257,11 +5257,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116700592}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
-        type: 3}
-      propertyPath: m_Name
-      value: PineappleAnimations_Current (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5331,6 +5326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
+        type: 3}
+      propertyPath: m_Name
+      value: PineappleAnimations_Current (1)
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
@@ -6130,7 +6130,7 @@ PrefabInstance:
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.29
+      value: -46.200146
       objectReference: {fileID: 0}
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
@@ -6140,12 +6140,12 @@ PrefabInstance:
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.16
+      value: -0.835742
       objectReference: {fileID: 0}
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.8788172
+      value: 0.712896
       objectReference: {fileID: 0}
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
@@ -6155,7 +6155,7 @@ PrefabInstance:
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.47715867
+      value: -0.70126987
       objectReference: {fileID: 0}
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
@@ -6175,12 +6175,12 @@ PrefabInstance:
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 57
+      value: 89.058
       objectReference: {fileID: 0}
     - target: {fileID: 3678524027404602454, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e33af7e0fed3d4b4e9d2cd65ad7bbee9, type: 3}
@@ -6819,12 +6819,12 @@ PrefabInstance:
     - target: {fileID: 2473477383578453328, guid: 775fd19e9dc9dea46b7d4ba95058747e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.8
+      value: 13.81
       objectReference: {fileID: 0}
     - target: {fileID: 2473477383578453328, guid: 775fd19e9dc9dea46b7d4ba95058747e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.2
+      value: -38.11
       objectReference: {fileID: 0}
     - target: {fileID: 2473477383578453328, guid: 775fd19e9dc9dea46b7d4ba95058747e,
         type: 3}
@@ -6885,6 +6885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishTailAnimations_Current
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: -4216859302048453862, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6955,11 +6960,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: 3061514662589243326, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8486,11 +8486,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116700592}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_Name
-      value: LettuceAnimations_Current (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8561,6 +8556,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_Name
+      value: LettuceAnimations_Current (1)
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_Controller
@@ -8576,11 +8581,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
-    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: -445942121879649074, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_RootOrder
@@ -8887,6 +8887,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishTailAnimations_Current (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: -4216859302048453862, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8957,11 +8962,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999992
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d2c2e00178fe6494896768bd28b29489,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ae01b323a8866b44b88e0e5a4c117e42, type: 2}
     - target: {fileID: 3061514662589243326, guid: d2c2e00178fe6494896768bd28b29489,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9031,11 +9031,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 462050138}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_Name
-      value: LettuceAnimations_Current (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9106,6 +9101,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_Name
+      value: LettuceAnimations_Current (1)
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_Controller
@@ -9121,11 +9126,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
-    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: -445942121879649074, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_RootOrder
@@ -9810,11 +9810,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1106190756}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
-        type: 3}
-      propertyPath: m_Name
-      value: PineappleAnimations_Current (2)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9884,6 +9879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.39999992
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c29de07cb8f0e4e4d8881e344733ddc3,
+        type: 3}
+      propertyPath: m_Name
+      value: PineappleAnimations_Current (2)
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: c29de07cb8f0e4e4d8881e344733ddc3,
         type: 3}
@@ -10231,8 +10231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 283, y: -225}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 194.6, y: -301.7}
+  m_SizeDelta: {x: 323.1, y: 94.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097133578
 MonoBehaviour:
@@ -10331,11 +10331,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1106190756}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_Name
-      value: LettuceAnimations_Current
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10406,6 +10401,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 61c258e51b5876d4481700688413fa8d,
+        type: 3}
+      propertyPath: m_Name
+      value: LettuceAnimations_Current
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_Controller
@@ -10421,11 +10426,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
-    - target: {fileID: -5597983542701756649, guid: 61c258e51b5876d4481700688413fa8d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: -445942121879649074, guid: 61c258e51b5876d4481700688413fa8d,
         type: 3}
       propertyPath: m_RootOrder
