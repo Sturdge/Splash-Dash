@@ -84,7 +84,7 @@ public class StunBehavior : MonoBehaviour
     /// Method for adding to the Stun bar
     /// </summary>
     /// <param name="value">The value to add to the bar</param>
-    public void AddStun(float value, DazeState daze, Player player)
+    public void AddStun(float value, DazeState daze, Player player,Player PaintableEnvironment)
     {
 
         if (StunProgress < 1)

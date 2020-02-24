@@ -2011,7 +2011,6 @@ GameObject:
   - component: {fileID: 1014453168}
   - component: {fileID: 1014453171}
   - component: {fileID: 1014453170}
-  - component: {fileID: 1014453169}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2033,19 +2032,6 @@ Transform:
   m_Father: {fileID: 2113373586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1014453169
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014453167}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1014453170
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3197,6 +3183,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1637191292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637191294}
+  - component: {fileID: 1637191293}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1637191293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637191292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a40c237bf412a488df0caa7c5954b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTime: 0
+  completeTime: 0
+--- !u!4 &1637191294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637191292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1, y: 0.9, z: -6.8671865}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658135405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,10 +3898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8535e3a6ad24c74cb3df1b2a3c689e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportTarget: {fileID: 7828662610638031483, guid: f1cdabd3090319445a37e92c86e24979,
-    type: 3}
-  thePlayer: {fileID: 4247129319799539470, guid: 3563f67745681584c9b8633513b4f2ee,
-    type: 3}
+  objToTP: {fileID: 7828662610638031457, guid: f1cdabd3090319445a37e92c86e24979, type: 3}
+  tpLoc: {fileID: 1014453168}
 --- !u!65 &2113373583
 BoxCollider:
   m_ObjectHideFlags: 0

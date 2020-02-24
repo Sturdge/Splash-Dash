@@ -277,9 +277,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3100385921047799177}
   - component: {fileID: -7053281964549341815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Food_Feud_Fridge
-  m_TagString: Untagged
+  m_TagString: PaintableEnvironment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

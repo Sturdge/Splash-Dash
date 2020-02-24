@@ -131,6 +131,24 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        if (other.CompareTag("PaintableEnvironment"))
+        {
+            if (IsDashing)
+            {
+                //SecondaryObjCollector objCollector = other.GetComponent<SecondaryObjCollector>();
+                //if (objCollector.HasSecondaryObj && objCollector.SecondaryObj != null)
+                   // objCollector.DropSecondaryObj();
+
+                PlayerController Player = other.gameObject.GetComponent<PlayerController>();
+                if (!Player.IsDashing)
+                {
+                    if (!Player.PlayerStun.Stunned)
+                        StartCoroutine(Player.PlayerStun.Stun(dashAmount));
+
+                    Splat();
+                }
+            }
+        }
     }
 
     private void FixedUpdate()

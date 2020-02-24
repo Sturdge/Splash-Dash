@@ -16,7 +16,7 @@ MonoBehaviour:
   isActivated: 1
   isLocked: 1
   playerScore: 10
-  scorePercentage: 0
+  scorePercentage: 20
   skinId: 3
   namesOfSkins:
   - Skin Red
