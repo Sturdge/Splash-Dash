@@ -1,4 +1,5 @@
-﻿/// <summary>
+﻿using UnityEngine;
+/// <summary>
 /// Class for the speedup buff
 /// </summary>
 public class ExplodingPotato : BuffDebuff
@@ -18,6 +19,15 @@ public class ExplodingPotato : BuffDebuff
         //Call the base implementation of OnUpdate
         base.OnUpdate(deltaTime);
     }
+
+    public override void OnHit(Collider other)
+    {
+        base.OnHit(other);
+        other.GetComponent<PlayerController>().PickUpPowerUp(this);
+        Parent.SetProperty<BuffDebuff>(nameof(Parent.CurrentPowerup), null);
+    }
+
+
     public override void End()
     {
         Parent.PlayerStun.StartCoroutine("Stun",5);

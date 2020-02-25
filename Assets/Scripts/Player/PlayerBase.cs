@@ -54,7 +54,7 @@ public class PlayerBase : MonoBehaviour
 
     private void Update()
     {
-        checkInput();
+        CheckInput();
         if (animator != null)
         {
             AnimationManagement();
@@ -62,7 +62,7 @@ public class PlayerBase : MonoBehaviour
     }
 
     //Checking Input to then change animations and Expressions
-    private void checkInput()
+    private void CheckInput()
     {
 
         if (pCon.IsDashing == true) //Check to see if player is dashing, if they are set animation to dash anim and Set expresiion

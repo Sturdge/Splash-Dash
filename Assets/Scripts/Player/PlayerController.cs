@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
     public DrawColor DrawColor { get; private set; }
     public PlayerBase PlayerBase { get; private set; }
     public DazeState PlayerStun { get; private set; }
-    public BuffDebuff CurrentPowerup { get; private set; }
+    public BuffDebuff CurrentPowerup { get;  set; }
 
     //Full properties
     private Vector3 _moveVelocity;
@@ -131,6 +131,16 @@ public class PlayerController : MonoBehaviour
 
                     Splat();
                 }
+            }
+            else
+            {
+
+                if (CurrentPowerup != null)
+                {
+                    CurrentPowerup.OnHit(other);
+                }
+
+
             }
         }
     }

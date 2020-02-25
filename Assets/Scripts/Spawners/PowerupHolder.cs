@@ -8,6 +8,8 @@ enum Powers
     Speedup,
     Trail,
     Splat,
+    Potato,
+    PullIn
 }
 
 public class PowerupHolder : MonoBehaviour
@@ -28,7 +30,9 @@ public class PowerupHolder : MonoBehaviour
     {
             {"Speedup", typeof(SpeedUp)},
             {"Trail", typeof(TrailPowerup)},
-            {"Splat", typeof(SplatRelease)}
+            {"Splat", typeof(SplatRelease)},
+            {"Potato", typeof(ExplodingPotato) },
+            {"PullIn", typeof(PullIn) }
     };
 
     private void Awake()
