@@ -47,9 +47,11 @@ public class NewMainMenu : MonoBehaviour
     private GameObject toolTip;
     private bool isTransition = false;
     private ObjectAudioHandler audioHandler;
+    private ControllerNav controlNav;
 
     private void Awake()
     {
+        controlNav = GameObject.Find("EventSystem").GetComponent<ControllerNav>();
     }
 
     private void Start()
@@ -200,6 +202,7 @@ public class NewMainMenu : MonoBehaviour
                 if (isTransition == false)
                 {
                     quitPanel.gameObject.SetActive(true);
+                    controlNav.ButtonID = 0;
                     canPressBtn = false;
 
                     audioHandler.SetSFX("Cancel");
