@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1482046289}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -6751297454651171246, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
   - {fileID: 4792681201152568964, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
@@ -1529,10 +1529,10 @@ Transform:
   m_Children:
   - {fileID: 581678228}
   - {fileID: 2141232522}
+  - {fileID: 5006512736261758137}
   - {fileID: 651047184}
   - {fileID: 1952443111}
   - {fileID: 985732668}
-  - {fileID: 5006512736261758137}
   - {fileID: 1372366502}
   m_Father: {fileID: 1730880212}
   m_RootOrder: 2
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1036833623}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -6751297454651171246, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
   - {fileID: 4792681201152568964, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
@@ -2146,11 +2146,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineappleAnimations_Current (3)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: -4216859302048453862, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2221,6 +2216,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3999999
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: 3061514662589243326, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2362,7 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 885369714}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -8487395241084211477, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
   - {fileID: -374282071780357409, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 339848914}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -8487395241084211477, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
   - {fileID: -374282071780357409, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
@@ -3085,7 +3085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 627639398}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -5960936190331513074, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
   - {fileID: -1031838968317428347, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
@@ -3288,7 +3288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1618295488}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -8487395241084211477, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
   - {fileID: -374282071780357409, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
@@ -3916,11 +3916,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineappleAnimations_Current
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: -4216859302048453862, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3991,6 +3986,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: 3061514662589243326, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4021,11 +4021,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettuceAnimations_Current (1)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     - target: {fileID: -4216859302048453862, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4096,6 +4091,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999998
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &1012234644 stripped
@@ -4122,7 +4122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 120581696}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -2956972527834942131, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
   - {fileID: 4535925395531633388, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
@@ -4308,11 +4308,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineappleAnimations_Current (2)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: -4216859302048453862, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4383,6 +4378,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999992
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: 3061514662589243326, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4682,7 +4682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1484673495}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -8487395241084211477, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
   - {fileID: -374282071780357409, guid: 8199742629ecadf4f803e1725edc4dfc, type: 3}
@@ -4699,11 +4699,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettuceAnimations_Current (3)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     - target: {fileID: -4216859302048453862, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4774,6 +4769,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3999999
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &1102427165 stripped
@@ -4800,7 +4800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1956920409}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -2956972527834942131, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
   - {fileID: 4535925395531633388, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
@@ -5106,7 +5106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1566459391}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -5960936190331513074, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
   - {fileID: -1031838968317428347, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
@@ -6058,7 +6058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 2121634783}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -6751297454651171246, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
   - {fileID: 4792681201152568964, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
@@ -6349,11 +6349,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineappleAnimations_Current (1)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: -4216859302048453862, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6424,6 +6419,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999998
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 36a913473a9395c48b116638284cc8a9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ac448a0ced9cbd24e95178b405a61426, type: 2}
     - target: {fileID: 3061514662589243326, guid: 36a913473a9395c48b116638284cc8a9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6565,7 +6565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 778946382}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -6751297454651171246, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
   - {fileID: 4792681201152568964, guid: 3cea29f27dc59b74f8c34bd82ec2c7d6, type: 3}
@@ -6684,7 +6684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 708989275}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -5960936190331513074, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
   - {fileID: -1031838968317428347, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
@@ -8542,7 +8542,94 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.28932214
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: UVModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734872373407746, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734872373407746, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734872373407746, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734872845458877, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734872845458877, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037734872845458877, guid: 0a4066c64959864488650cbbb2704008,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4037734871942880902, guid: 0a4066c64959864488650cbbb2704008, type: 3}
+    - {fileID: 4037734871942880921, guid: 0a4066c64959864488650cbbb2704008, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a4066c64959864488650cbbb2704008, type: 3}
 --- !u!4 &1926930863 stripped
 Transform:
@@ -8664,7 +8751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 682500485}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -5960936190331513074, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
   - {fileID: -1031838968317428347, guid: 24aea99ddf8ff5545be056fd5c6166a7, type: 3}
@@ -8761,11 +8848,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettuceAnimations_Current (2)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     - target: {fileID: -4216859302048453862, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8836,6 +8918,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.39999992
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &2004876948 stripped
@@ -8862,7 +8949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 1674624723}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -2956972527834942131, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
   - {fileID: 4535925395531633388, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
@@ -9451,11 +9538,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettuceAnimations_Current
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     - target: {fileID: -4216859302048453862, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9526,6 +9608,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &2141232522 stripped
@@ -9552,7 +9639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b51280320438e41a7f88a2a3eed3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceObj: {fileID: 444129167}
+  faceRenderer: {fileID: 0}
   listOfExpressions:
   - {fileID: -2956972527834942131, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
   - {fileID: 4535925395531633388, guid: aa2a2f58b751a104398227467b2b4b03, type: 3}
@@ -12283,7 +12370,7 @@ Transform:
   - {fileID: 7384654339137450047}
   - {fileID: 750795761965108981}
   m_Father: {fileID: 462050138}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5194031469120551421
 GameObject:

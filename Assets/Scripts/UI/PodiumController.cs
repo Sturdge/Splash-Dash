@@ -44,7 +44,13 @@ public class PodiumController : MonoBehaviour
         }
 
             models[player.skinId].gameObject.SetActive(true);
-        podiumMesh.material = podiumAlternates[player.skinId];
+            podiumMesh.material = podiumAlternates[player.skinId];
+        foreach( ParticleSystem p in podiumMesh.GetComponentInChildren<Transform>().GetComponentsInChildren<ParticleSystem>())
+        {
+            Color _playerColour = new Color(player.SkinColours[player.skinId].r, player.SkinColours[player.skinId].g, player.SkinColours[player.skinId].b, 1);
+            p.startColor = _playerColour;
+        }
+
             animator = models[player.skinId].GetComponent<Animator>();
             //models[player.skinId].GetComponent<ExpressionManager>().SetExpression(0);
 

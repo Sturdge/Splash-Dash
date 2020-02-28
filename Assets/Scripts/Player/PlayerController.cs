@@ -216,7 +216,7 @@ public class PlayerController : MonoBehaviour
             UpdateFillBar();
         }
     }
-    public void Splat()
+    public void Splat(float size = 1)
     {
         Ray ray = new Ray(transform.position, -transform.up);
 
@@ -230,9 +230,9 @@ public class PlayerController : MonoBehaviour
 
                 float _smult;
                 if (paintMultiplier)
-                    _smult = paintMultiplier.multiplier * weaponSplashMultiplier;
+                    _smult = paintMultiplier.multiplier * weaponSplashMultiplier * size;
                 else
-                    _smult = 1f * weaponSplashMultiplier;
+                    _smult = 1f * weaponSplashMultiplier * size;
 
                 int _id = Player.playerNum;
                 for (int i = 0; i < 10; i++)
