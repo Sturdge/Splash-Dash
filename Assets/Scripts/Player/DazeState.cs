@@ -66,23 +66,30 @@ public class DazeState : MonoBehaviour
 
     public IEnumerator Stun(float dashAmount)
     {
-        if (canBeStunned)
+        if (playerController.StunImmunityPowerup != null)
         {
-            ToggleStars(true);
+            playerController.StunImmunityPowerup.End();
+        }
+        else
+        {
+            if (canBeStunned)
+            {
+                stunStars.ToggleGameObjects(true);
 
-            Stunned = true;
-            CanShoot = false;
-            stunDuration.CalculateFromPercentage(stunDurationMin, stunDurationMax, dashAmount);
+                Stunned = true;
+                CanShoot = false;
+                stunDuration.CalculateFromPercentage(stunDurationMin, stunDurationMax, dashAmount);
 
-            yield return new WaitForSeconds(stunDuration);
+                yield return new WaitForSeconds(stunDuration);
 
-            ToggleStars(false);
+                stunStars.ToggleGameObjects(false);
 
-            Stunned = false;
-            CanShoot = true;
-            cooldownTime.CalculateFromPercentage(cooldownTimeMin, cooldownTimeMax, dashAmount);
+                Stunned = false;
+                CanShoot = true;
+                cooldownTime.CalculateFromPercentage(cooldownTimeMin, cooldownTimeMax, dashAmount);
 
-            StartCoroutine(StunCooldown(cooldownTime));
+                StartCoroutine(StunCooldown(cooldownTime));
+            }
         }
     }
 
@@ -94,18 +101,6 @@ public class DazeState : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         canBeStunned = true;
-
-    }
-
-    private void ToggleStars(bool enabled)
-    {
-
-        foreach(GameObject star in stunStars)
-        {
-
-            star.SetActive(enabled);
-
-        }
 
     }
 
