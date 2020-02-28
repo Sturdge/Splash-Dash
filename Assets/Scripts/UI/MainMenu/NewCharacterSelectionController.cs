@@ -17,6 +17,8 @@ public class NewCharacterSelectionController : MonoBehaviour
     [SerializeField]
     private Transform cameraTransform, mainMenuCameraPoint, sinkPos;
     [SerializeField]
+    private Transform readyMsgBar;
+    [SerializeField]
     private float waitBetweenAnimation = 0.5f;
     [SerializeField]
     private float animationSpeed = 0.5f;
@@ -32,7 +34,14 @@ public class NewCharacterSelectionController : MonoBehaviour
     [Header("Animation and animation points")]
     private Animator doorAnimation;
     private bool isTransition = false;
+    private bool isConfirmation;
     private Loading loadingManager;
+    private ControllerNav controlNav;
+
+    private void Awake()
+    {
+        controlNav = GameObject.Find("EventSystem").GetComponent<ControllerNav>();
+    }
 
     private void Start()
     {
@@ -41,6 +50,8 @@ public class NewCharacterSelectionController : MonoBehaviour
 
     private void OnEnable()
     {
+        isConfirmation = false;
+        readyMsgBar.gameObject.SetActive(false);
         doorAnimation = doorHolder.GetComponent<Animator>();
         doorAnimation.enabled = false;
         for (int i = 0; i < players.Length; i++)
@@ -62,7 +73,14 @@ public class NewCharacterSelectionController : MonoBehaviour
 
     private void Update()
     {
-        if (canPressBtn == true)
+        if (isConfirmation == true)
+        {
+            if (Input.GetButtonDown("BackButton"))
+            {
+                ReadyCancel();
+            }
+        }
+        else if (canPressBtn == true)
         {
             if (Input.GetButtonDown("BackButton"))
             {
@@ -107,7 +125,34 @@ public class NewCharacterSelectionController : MonoBehaviour
         // Debug.Log(canStart + " and ready players num: " + readyPlayers);
         if (canStart == true && readyPlayers >= 2)
         {
-            RandomMap();
+            DisplayReadyMSg();
+        }
+    }
+
+    private void DisplayReadyMSg()
+    {
+        isConfirmation = true;
+        readyMsgBar.gameObject.SetActive(true);
+        controlNav.ButtonID = 1;
+    }
+
+    public void ReadConfirm()
+    {
+        readyMsgBar.gameObject.SetActive(false);
+        RandomMap();
+    }
+
+    public void ReadyCancel()
+    {
+        isConfirmation = false;
+        readyMsgBar.gameObject.SetActive(false);
+        for (int i = 0; i < pinController.Length; i++)
+        {
+            pinController[i].gameObject.SetActive(false);
+        }
+        for (int i = 0; i < pinController.Length; i++)
+        {
+            pinController[i].gameObject.SetActive(true);
         }
     }
 
