@@ -29,7 +29,8 @@ public class Loading : MonoBehaviour
 
     public void SetID(int id)
     {
-        sceneToLoadId = id;
+        //  sceneToLoadId = id;
+        sceneToLoadId = 1;
     }
 
     //Coroutine for loading screen

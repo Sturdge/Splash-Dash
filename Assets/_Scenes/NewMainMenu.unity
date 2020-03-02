@@ -8619,7 +8619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471525868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -11217,7 +11217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822365127}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -12209,10 +12209,12 @@ MonoBehaviour:
   cameraTransform: {fileID: 254859330}
   mainMenuCameraPoint: {fileID: 876354913}
   sinkPos: {fileID: 1439434387}
+  characterSelectionPoint: {fileID: 2083695943}
   readyMsgBar: {fileID: 2037592603}
   waitBetweenAnimation: 2
   animationSpeed: 0.5
   cameraMoveSpeed: 0.2
+  sinkCamMoveSpeed: 1
   usingLerp: 1
   pinLocations:
   - {fileID: 1639363636}
