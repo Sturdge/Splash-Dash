@@ -20,7 +20,6 @@ TagManager:
   - SpawnPoint
   - ScoreGrid
   - ObjectCollider
-  - Special
   layers:
   - Default
   - TransparentFX

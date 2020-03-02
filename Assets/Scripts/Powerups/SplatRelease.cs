@@ -18,7 +18,7 @@ public class SplatRelease : BuffDebuff
         base.OnUpdate(deltaTime);
         //If the player releases the dash button and isn't dashing, run the splat method
         if (Input.GetButtonUp($"Dash{Parent.Player.playerNum}") && !Parent.IsDashing)
-            Parent.Splat(0.5f);
+            Parent.Splat();
     }
 
     public override void End()

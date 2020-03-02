@@ -4,6 +4,8 @@
 public class ExplodingPotato : BuffDebuff
 {
 
+    //Field to store the original speed of the player
+
     public override void Start(PlayerController parent, float dur = 5)
     {
         //Call the base implementation of Start
