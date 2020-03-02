@@ -8,9 +8,9 @@
  *              James Sturdgess
  */
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 public class PlayerController : MonoBehaviour
 {
 
@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
     private float dashCooldownMax;
 
     private float dashPower;
-    private float dashAmount;
     private bool canDash;
     private Vector3 dashPosition;
     public bool IsDashing { get; private set; }
@@ -72,6 +71,7 @@ public class PlayerController : MonoBehaviour
     private ObjectAudioHandler audioHandler;
 
     //Auto Properties
+    public float dashAmount { get; private set; }
     public DrawColor DrawColor { get; private set; }
     public PlayerBase PlayerBase { get; private set; }
     public DazeState PlayerStun { get; private set; }
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
                     if (!otherPlayer.PlayerStun.Stunned)
                         StartCoroutine(otherPlayer.PlayerStun.Stun(dashAmount));
 
-                    Splat();
+                    Splat(dashAmount);
                 }
             }
         }
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
                 if (!PlayerStun.Stunned)
                 {
                     StartCoroutine(PlayerStun.Stun(dashAmount));
-                    Splat();
+                    Splat(dashAmount);
                 }
             }
         }
@@ -222,7 +222,8 @@ public class PlayerController : MonoBehaviour
             UpdateFillBar();
         }
     }
-    public void Splat()
+
+    public void Splat(float multiplier = 1)
     {
         Ray ray = new Ray(transform.position, -transform.up);
 
@@ -236,9 +237,9 @@ public class PlayerController : MonoBehaviour
 
                 float _smult;
                 if (paintMultiplier)
-                    _smult = paintMultiplier.multiplier * weaponSplashMultiplier;
+                    _smult = paintMultiplier.multiplier * multiplier;
                 else
-                    _smult = 1f * weaponSplashMultiplier;
+                    _smult = 1f * multiplier;
 
                 int _id = Player.playerNum;
                 for (int i = 0; i < 10; i++)
@@ -252,15 +253,26 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.CompareTag("ScoreGrid"))
             {
-                ScoreSquare square = hit.collider.GetComponent<ScoreSquare>();
+                Collider[] squaresHit = Physics.OverlapSphere(hit.collider.gameObject.transform.position, 6 * multiplier);
 
-                if (square.Value != Player.skinId)
+                for (int i = 0; i < squaresHit.Length; i++)
                 {
-                    square.SetValue(Player.skinId);
-                    GameObject _sg = Instantiate(scoreText, transform);
-                    _sg.GetComponent<TextMeshPro>().text = "+1";
-                    _sg.GetComponent<TextMeshPro>().color = Player.SkinColours[Player.skinId];
+                    ScoreSquare square = squaresHit[i].GetComponent<ScoreSquare>();
+
+                    if (square)
+                    {
+                        if (square.Value != Player.skinId)
+                        {
+                            square.SetValue(Player.skinId);
+                            GameObject _sg = Instantiate(scoreText, transform);
+                            _sg.GetComponent<TextMeshPro>().text = "+1";
+                            _sg.GetComponent<TextMeshPro>().color = Player.SkinColours[Player.skinId];
+                        }
+
+                    }
+
                 }
+
             }
         }
     }
@@ -311,5 +323,4 @@ public class PlayerController : MonoBehaviour
         if (fillBar != null)
             fillBar.fillAmount = dashAmount;
     }
-
 }

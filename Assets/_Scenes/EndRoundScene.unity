@@ -4095,6 +4095,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
+    - target: {fileID: -7401873430440114406, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3fb2d799e25da9a4f886af9484838acd, type: 2}
+    - target: {fileID: 3061514662589243326, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &1012234644 stripped
@@ -4773,6 +4783,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
+    - target: {fileID: -7401873430440114406, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3fb2d799e25da9a4f886af9484838acd, type: 2}
+    - target: {fileID: 3061514662589243326, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &1102427165 stripped
@@ -5799,7 +5819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1332863266
 Transform:
   m_ObjectHideFlags: 0
@@ -7148,7 +7168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1495123224
 Transform:
   m_ObjectHideFlags: 0
@@ -9040,7 +9060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2003291913
 Transform:
   m_ObjectHideFlags: 0
@@ -9191,6 +9211,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
+    - target: {fileID: -7401873430440114406, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3fb2d799e25da9a4f886af9484838acd, type: 2}
+    - target: {fileID: 3061514662589243326, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &2004876948 stripped
@@ -9639,7 +9669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2099742100
 Transform:
   m_ObjectHideFlags: 0
@@ -9871,6 +9901,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c6cc5568098a37c439ede6d5d006b875, type: 2}
+    - target: {fileID: -7401873430440114406, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3fb2d799e25da9a4f886af9484838acd, type: 2}
+    - target: {fileID: 3061514662589243326, guid: 3c5e52cfc749bd34e96d1b5fd351a56a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5c4406851992b74dae887d033ffad36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5e52cfc749bd34e96d1b5fd351a56a, type: 3}
 --- !u!4 &2141232522 stripped
