@@ -32,6 +32,8 @@ public class EndGameScore : MonoBehaviour
     private GameObject[] winningPlayer;
     [SerializeField]
     private GameObject[] winnerIcons;
+    [SerializeField]
+    private Text mostDashes, mostStuns, mostPowerups;
 
     private void Start()
     {
@@ -95,9 +97,56 @@ public class EndGameScore : MonoBehaviour
                     thePlayerData[usedPodiums].gameObject.SetActive(true);
                     thePlayerData[usedPodiums].GetComponent<PodiumController>().SetTotal(total);
                     usedPodiums++;
-                    SoundManager.Instance.SetBGM("Win");
+                    if (SoundManager.Instance != null)
+                    {
+                        SoundManager.Instance.SetBGM("Win");
+                    }
                 }
             }
+        }
+        medalAssignment();
+    }
+
+    private void medalAssignment()
+    {
+        if (players.Length >= 3)
+        {
+            List<Player> medalDash = new List<Player>();
+            List<Player> medalStun = new List<Player>();
+            List<Player> medalPowerup = new List<Player>();
+            medalDash.AddRange(players);
+
+            medalDash = players.OrderByDescending(o => o.DashCount).ToList();
+            medalPowerup.AddRange(players);
+            medalPowerup.Remove(medalDash[0]);
+
+            medalPowerup = players.OrderByDescending(o => o.PowerUpsCount).ToList();
+            medalStun.AddRange(players);
+
+            medalStun = players.OrderByDescending(o => o.StunCount).ToList();
+            medalStun.Remove(medalDash[0]);
+            medalStun.Remove(medalPowerup[0]);
+
+            mostDashes.text = "Most Dashes: " + medalDash[0].name;
+            mostStuns.text = "Most Stuns: " + medalStun[0].name;
+            mostPowerups.text = "Most Powerups: " + medalPowerup[0].name;
+        }
+        else
+        {
+            List<Player> medalDash = new List<Player>();
+            List<Player> medalStun = new List<Player>();
+            List<Player> medalPowerup = new List<Player>();
+            medalDash.AddRange(players);
+
+            medalDash = players.OrderByDescending(o => o.DashCount).ToList();
+            medalPowerup.AddRange(players);
+            medalPowerup = players.OrderByDescending(o => o.PowerUpsCount).ToList();
+            medalStun.AddRange(players);
+            medalStun = players.OrderByDescending(o => o.StunCount).ToList();
+
+            mostDashes.text = "Most Dashes: " + medalDash[0].name;
+            mostStuns.text = "Most Stuns: " + medalStun[0].name;
+            mostPowerups.text = "Most Powerups: " + medalPowerup[0].name;
         }
     }
 

@@ -75,7 +75,7 @@ public class DazeState : MonoBehaviour
             if (canBeStunned)
             {
                 stunStars.ToggleGameObjects(true);
-
+                playerbase.Player.StunCount++;
                 Stunned = true;
                 CanShoot = false;
                 stunDuration.CalculateFromPercentage(stunDurationMin, stunDurationMax, dashAmount);

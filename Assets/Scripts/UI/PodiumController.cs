@@ -89,7 +89,10 @@ public class PodiumController : MonoBehaviour
         else if(player.hasWon == false)
         {
             animator.SetInteger("Pos", 2);
-            models[player.skinId].GetComponent<ExpressionManager>().SetExpression(2);
+            if (models[player.skinId].GetComponent<ExpressionManager>() != null)
+            {
+                models[player.skinId].GetComponent<ExpressionManager>().SetExpression(2);
+            }
         }
     }
 
