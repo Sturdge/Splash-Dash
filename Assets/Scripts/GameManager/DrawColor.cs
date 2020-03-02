@@ -73,8 +73,9 @@ public class DrawColor : MonoBehaviour
 
         int terrainNum = _terrain.IndexOf(hit.collider.gameObject);
 
-        int _currentSplat = UnityEngine.Random.Range(0, 10);
+        int _currentSplat = UnityEngine.Random.Range(0, 8);
 
+        
         //coreCalc.Instance.CircleLogic(hit, (UInt16)id, terrainNum);
 
         drawMaterial.SetFloat("_Size", 0.1f * _sizeMultiplier);

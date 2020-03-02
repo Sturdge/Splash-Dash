@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using StateMachine;
 
+
 public class DazeState : MonoBehaviour
 {
 
@@ -44,6 +45,11 @@ public class DazeState : MonoBehaviour
     public bool Stunned { get; private set; }
     public bool CanShoot { get; private set; }
 
+    public delegate int StunDelegate(int id);
+    public event StunDelegate stunEvent;
+
+    
+
     private void Start()
     {
         playerbase = GetComponent<PlayerBase>();
@@ -70,6 +76,8 @@ public class DazeState : MonoBehaviour
         {
             stunStars.ToggleGameObjects(true);
 
+            StunCounter(playerbase.Player.playerNum);
+
             Stunned = true;
             CanShoot = false;
             stunDuration.CalculateFromPercentage(stunDurationMin, stunDurationMax, dashAmount);
@@ -81,6 +89,8 @@ public class DazeState : MonoBehaviour
             Stunned = false;
             CanShoot = true;
             cooldownTime.CalculateFromPercentage(cooldownTimeMin, cooldownTimeMax, dashAmount);
+
+            
 
             StartCoroutine(StunCooldown(cooldownTime));
         }
@@ -95,6 +105,24 @@ public class DazeState : MonoBehaviour
 
         canBeStunned = true;
 
+    }
+
+    void StunCounter(int playerID)
+    {
+        Debug.Log(playerID);
+        if (stunEvent != null)
+        {
+            stunEvent(playerID);
+
+            if (stunEvent.GetInvocationList() != null)
+            {
+                Debug.Log(stunEvent.GetInvocationList());
+            }
+            else
+            {
+                Debug.Log("No Invocators");
+            }
+        }
     }
 
 }

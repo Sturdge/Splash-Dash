@@ -29,8 +29,11 @@ public class EndGameScore : MonoBehaviour
     [SerializeField]
     private GameObject[] winningPlayer;
 
+    MedalManager medalManager;
+
     private void Start()
     {
+        medalManager = MedalManager.Instance;
         //enables end score menu/rematch buttons
         foreach (GameObject goMB in menuButtons)
         {
@@ -42,11 +45,26 @@ public class EndGameScore : MonoBehaviour
             goWP.SetActive(true);
         }
 
+        
+
 
         loading = GameObject.Find("LoadingManager").GetComponent<Loading>();
         sortedPlayers = players.OrderByDescending(o => o.playerScore).ToList();
         {
+            #region stunMedal
+            int _currentPodium = 0;
 
+            foreach (Player p in sortedPlayers)
+            {
+                if (p.playerNum == medalManager.GetTopStunned())
+                {
+                    _currentPodium = p.playerNum;
+                }
+            }
+
+            medalManager.SpawnMedal(podiumLocations[_currentPodium].transform.position);
+
+            #endregion
             for (int i = 0; i < players.Length; i++)
             {
 
@@ -108,7 +126,11 @@ public class EndGameScore : MonoBehaviour
                     }
                 }
             }
+
+            
         }
+
+        
 
 
 
@@ -159,4 +181,7 @@ public class EndGameScore : MonoBehaviour
 
         SceneManager.LoadScene(1);
     }
+
+    
+
 }
