@@ -197,7 +197,7 @@ public class PlayerController : MonoBehaviour
                 dashAmount += Time.deltaTime;
             else
                 dashAmount = 1;
-
+            Player.DashCount++;
             UpdateFillBar();
         }
 

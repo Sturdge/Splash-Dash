@@ -78,6 +78,7 @@ public class PowerupHolder : MonoBehaviour
                     //Call the Collected method on the parent
                     parent.Collected();
                     //Disable this object
+                    player.Player.PowerUpsCount++;
                     gameObject.SetActive(false);
                 }
             }

@@ -191,6 +191,9 @@ public class ManageGame : MonoBehaviour
                     PlayerBase playerBase = newPlayer.GetComponent<PlayerBase>();
                     playerBase.Player = players[i];
                     players[i].Speed = players[i].DefaultSpeed;
+                    players[i].DashCount = 0;
+                    players[i].StunCount = 0;
+                    players[i].PowerUpsCount = 0;
                     playerObjects.Add(newPlayer);
                 }
             }
