@@ -24,7 +24,6 @@ public class PowerupHolder : MonoBehaviour
     [SerializeField]
     private float speed; //The speed at which the object rotates and bobs up and down
     private float originalY;
-    private string powerName; //The string value of the power
     private PowerupNode parent;
 
     //Dictionary to contain the buff/debuff classes
@@ -44,8 +43,6 @@ public class PowerupHolder : MonoBehaviour
         parent = transform.parent.gameObject.GetComponent<PowerupNode>();
         //Set the original y position
         originalY = transform.position.y;
-        //Get String value of powerheld
-        powerName = Enum.GetName(typeof(Powers), powerHeld);
     }
 
     private void Update()
@@ -66,6 +63,8 @@ public class PowerupHolder : MonoBehaviour
         {
             //Cache reference to player
             PlayerController player = other.GetComponent<PlayerController>();
+            //Get String value of powerheld
+            string power = Enum.GetName(typeof(Powers), powerHeld);
 
             //If this is a buff, give it to the player who entered the trigger, else give it to everyone else
             if (!isDebuff)
@@ -73,7 +72,7 @@ public class PowerupHolder : MonoBehaviour
                 if (player.CurrentPowerup == null)
                 {
                     //Give player the buff
-                    player.PickUpPowerUp((BuffDebuff)Activator.CreateInstance(powers[powerName]));
+                    player.PickUpPowerUp((BuffDebuff)Activator.CreateInstance(powers[power]));
 
                     //Call the Collected method on the parent
                     parent.Collected();
@@ -94,14 +93,14 @@ public class PowerupHolder : MonoBehaviour
                     PlayerController playerToCheck = playerObjects[i].GetComponent<PlayerController>();
                     //If the checked player is not the player who entered the trigger, give them the debuff
                     if (playerToCheck != player)
-                        playerToCheck.PickUpPowerUp((BuffDebuff)Activator.CreateInstance(powers[powerName]));
+                        playerToCheck.PickUpPowerUp((BuffDebuff)Activator.CreateInstance(powers[power]));
                 }
 
                 //Call the Collected method on the parent
                 parent.Collected();
                 //Disable this object
                 gameObject.SetActive(false);
-            }
+            }  
         }
     }
 }

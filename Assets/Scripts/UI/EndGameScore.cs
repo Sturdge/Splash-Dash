@@ -103,6 +103,22 @@ public class EndGameScore : MonoBehaviour
                     }
                 }
             }
+            //Disables all score texts
+
+
+            sortedPlayers = players.OrderByDescending(o => o.playerScore).ToList();
+
+            for (int i = 0; i < sortedPlayers.Count; i++)
+            {
+                if (sortedPlayers[i].isActivated == true)
+                {
+                    if (sortedPlayers[i].isLocked == true)
+                    {
+                        winningPlayer[i].gameObject.SetActive(true);
+                        winningPlayer[i].GetComponent<Text>().text = $"Player {sortedPlayers[i].playerNum} Score: {(int)sortedPlayers[i].scorePercentage}%";
+                    }
+                }
+            }
         }
         medalAssignment();
     }
@@ -148,6 +164,7 @@ public class EndGameScore : MonoBehaviour
             mostStuns.text = "Most Stuns: " + medalStun[0].name;
             mostPowerups.text = "Most Powerups: " + medalPowerup[0].name;
         }
+
     }
 
     //returns to main menu
@@ -163,13 +180,6 @@ public class EndGameScore : MonoBehaviour
         foreach (GameObject goWP in winningPlayer)
         {
             goWP.SetActive(false);
-        }
-
-        foreach (Player p in players)
-        {
-
-            p.hasWon = false;
-
         }
 
         SceneManager.LoadScene(0);
@@ -188,13 +198,6 @@ public class EndGameScore : MonoBehaviour
         foreach (GameObject goWP in winningPlayer)
         {
             goWP.SetActive(false);
-        }
-
-        foreach(Player p in sortedPlayers)
-        {
-
-            p.hasWon = false;
-
         }
 
         //reload characters
