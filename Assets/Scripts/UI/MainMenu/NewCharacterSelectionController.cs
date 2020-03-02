@@ -15,7 +15,7 @@ public class NewCharacterSelectionController : MonoBehaviour
     [SerializeField]
     private Transform doorHolder;
     [SerializeField]
-    private Transform cameraTransform, mainMenuCameraPoint, sinkPos;
+    private Transform cameraTransform, mainMenuCameraPoint, sinkPos, characterSelectionPoint;
     [SerializeField]
     private Transform readyMsgBar;
     [SerializeField]
@@ -24,6 +24,8 @@ public class NewCharacterSelectionController : MonoBehaviour
     private float animationSpeed = 0.5f;
     [SerializeField]
     private float cameraMoveSpeed = 0.2f;
+    [SerializeField]
+    private float sinkCamMoveSpeed = 0.05f;
     [SerializeField]
     private bool usingLerp = true;
     [SerializeField]
@@ -78,6 +80,10 @@ public class NewCharacterSelectionController : MonoBehaviour
             if (Input.GetButtonDown("BackButton"))
             {
                 ReadyCancel();
+            }
+            if(Input.GetButtonDown("Dash"))
+            {
+                ReadConfirm();
             }
         }
         else if (canPressBtn == true)
@@ -198,13 +204,13 @@ public class NewCharacterSelectionController : MonoBehaviour
         {
             if (usingLerp == true)
             {
-                cameraTransform.position = Vector3.Lerp(cameraTransform.position, sinkPos.position, cameraMoveSpeed);
+                cameraTransform.position = Vector3.Lerp(cameraTransform.position, sinkPos.position, sinkCamMoveSpeed);
             }
             else
             {
-                cameraTransform.position = Vector3.MoveTowards(cameraTransform.position, sinkPos.position, cameraMoveSpeed);
+                cameraTransform.position = Vector3.MoveTowards(cameraTransform.position, sinkPos.position, sinkCamMoveSpeed);
             }
-            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, sinkPos.rotation, cameraMoveSpeed);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, sinkPos.rotation, sinkCamMoveSpeed);
             if (Vector3.Distance(cameraTransform.position, sinkPos.position) < 0.1f) arrived = true;
             Debug.Log("Has arrived");
             yield return null;
