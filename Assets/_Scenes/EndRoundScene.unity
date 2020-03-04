@@ -2336,9 +2336,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
-<<<<<<< HEAD
 --- !u!1001 &581678227
-=======
 --- !u!1 &627639396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,7 +2480,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 15fa48208f7ce364e8fafdd6c042cf49, type: 2}
   - {fileID: 2100000, guid: b02cb17c532fad74d866e960b547e993, type: 2}
 --- !u!1001 &667079475
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5424,15 +5421,12 @@ PrefabInstance:
     - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
         type: 3}
       propertyPath: m_Name
-<<<<<<< HEAD
       value: SodaCan (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5703609814412677708, guid: 0694a0cb7a9148944bda28da30fd6146,
-=======
       value: LoadingPanel
       objectReference: {fileID: 0}
     - target: {fileID: 8445408346885361946, guid: 6bbf727faf0490d499f0716a71dc7d18,
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.14
@@ -5487,8 +5481,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 8445408346885361946, guid: 6bbf727faf0490d499f0716a71dc7d18,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5544,7 +5536,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0694a0cb7a9148944bda28da30fd6146, type: 3}
 --- !u!4 &1107024894 stripped
@@ -5850,8 +5841,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-<<<<<<< HEAD
-=======
   m_Children:
   - {fileID: 1859301404}
   - {fileID: 1464618062}
@@ -6037,7 +6026,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
   m_Children: []
   m_Father: {fileID: 2081562311}
   m_RootOrder: 3
@@ -6885,7 +6873,6 @@ MonoBehaviour:
   - {fileID: 5006512735841909634}
   - {fileID: 1813324890}
   animator: {fileID: 0}
-<<<<<<< HEAD
   podium: {fileID: 868142085}
   podiumMesh: {fileID: 1560449370}
   podiumAlternates:
@@ -6897,7 +6884,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: e1ac9a9697471c34abef2d9109feb406, type: 2}
   speed: 2
 --- !u!4 &1333453398
-=======
   podium: {fileID: 178316067}
   rend: {fileID: 1786424028}
   podiumMaterials:
@@ -6906,7 +6892,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 15fa48208f7ce364e8fafdd6c042cf49, type: 2}
   - {fileID: 2100000, guid: b02cb17c532fad74d866e960b547e993, type: 2}
 --- !u!4 &1730880212
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7599,7 +7584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
@@ -7618,7 +7602,6 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1397774045
 CanvasRenderer:
-=======
   player: {fileID: 0}
   playerHolder: {fileID: 1106190756}
   models:
@@ -7636,7 +7619,6 @@ CanvasRenderer:
   - {fileID: 2100000, guid: b02cb17c532fad74d866e960b547e993, type: 2}
 --- !u!4 &1921334034
 Transform:
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
