@@ -8,6 +8,7 @@
  */
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -52,9 +53,16 @@ public class ManageGame : MonoBehaviour
     public List<GameObject> PlayerObjects { get => playerObjects; set => playerObjects = value; }
     public List<GameObject> MapEdgesForGodPower { get => mapEdgesForGodPower; set => mapEdgesForGodPower = value; }
     public GameObject GodPowerUp { get => godPowerUp; set => godPowerUp = value; }
+<<<<<<< HEAD
     private SpecialButton specialButton;
     private float timeLimit = 60;
 
+=======
+
+    //Sound
+    private SoundManager sm;
+    bool finalStretch = false;
+>>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
     //Creates instance of game manager
     private void Awake()
     {
@@ -68,8 +76,12 @@ public class ManageGame : MonoBehaviour
         }
 
         clockHand.eulerAngles = v3Rot;
+<<<<<<< HEAD
 
         specialButton = GameObject.FindGameObjectWithTag("Special").GetComponent<SpecialButton>();
+=======
+        sm = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+>>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
     }
     //handles display and counting of round timer
     [SerializeField]
@@ -89,16 +101,29 @@ public class ManageGame : MonoBehaviour
             //Debug.Log(reverseTime);
             reverseTime += Time.deltaTime;
             clockHand.transform.eulerAngles = v3Rot;
-          //  var lookDir = pointB.position - clockHand.position;
-           // lookDir.y = 90; 
-          //  lookDir.z = 0;
+            //  var lookDir = pointB.position - clockHand.position;
+            // lookDir.y = 90; 
+            //  lookDir.z = 0;
             //clockHand.rotation = Quaternion.LookRotation(lookDir);
-           // Quaternion rot = Quaternion.LookRotation(lookDir);
-           // clockHand.rotation = Quaternion.Slerp(clockHand.rotation, rot, 1 * Time.deltaTime);
+            // Quaternion rot = Quaternion.LookRotation(lookDir);
+            // clockHand.rotation = Quaternion.Slerp(clockHand.rotation, rot, 1 * Time.deltaTime);
             //  string minutes = ((int)reverseTime / 60).ToString("00");
             //string seconds = ((int)reverseTime % 60).ToString("00");
             // timeRemaining.text = string.Format("{00:00}:{01:00}", minutes, seconds);
+<<<<<<< HEAD
             if (reverseTime >= timeLimit)
+=======
+            if (finalStretch == false)
+            {
+                if (reverseTime >= 50)
+                {
+                    StartCoroutine("LerpTempo");
+                    
+                }
+            }
+
+            if (reverseTime >= 60)
+>>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
             {
                 reverseTime = timeLimit;
                 if(OnGameWin != null)
@@ -239,5 +264,20 @@ public class ManageGame : MonoBehaviour
         {
             SoundManager.Instance.PlayGameTheme();
         }
+    }
+
+    private IEnumerator LerpTempo()
+    {
+        finalStretch = true;
+        float i = 1;
+        while(reverseTime < 58)
+        {
+            sm.SetBGMTempo(i);
+            i += 0.0005f;
+            yield return new WaitForEndOfFrame();
+        }
+        sm.SetBGMTempo(1);
+        SoundManager.Instance.SetBGM("End");
+        yield return new WaitForSeconds(0f);
     }
 }

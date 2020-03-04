@@ -25,11 +25,21 @@ public class PodiumController : MonoBehaviour
     private float total;
     [SerializeField]
     private Transform podium;
+<<<<<<< HEAD
     [SerializeField]
     private MeshRenderer podiumMesh;
     [SerializeField]
     private Material[] podiumAlternates;
     [SerializeField]
+=======
+
+    [SerializeField]
+    private Renderer rend;
+
+    [SerializeField]
+    private List<Material> podiumMaterials;
+
+>>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
     private float speed = 2.0f;
     private float duration = 5.0f;
 
@@ -51,6 +61,35 @@ public class PodiumController : MonoBehaviour
             animator.enabled = true;
             animator.SetInteger("Pos", 0);
 
+<<<<<<< HEAD
+=======
+        
+        switch (player.skinId)
+        {
+            case (0):
+                {
+                    rend.material = podiumMaterials[0];
+                    break;
+                }
+            case (1):
+                {
+                    rend.material = podiumMaterials[1];
+                    break;
+                }
+            case (2):
+                {
+                    rend.material = podiumMaterials[2];
+                    break;
+                }
+            case (3):
+                {
+                    rend.material = podiumMaterials[3];
+                    break;
+                }
+        }
+
+
+>>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
     }
     public void SetTotal(float _total)
     {

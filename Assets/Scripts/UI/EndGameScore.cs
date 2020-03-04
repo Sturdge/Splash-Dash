@@ -162,7 +162,20 @@ public class EndGameScore : MonoBehaviour
         }
         foreach (GameObject goWP in winningPlayer)
         {
+<<<<<<< HEAD
             goWP.SetActive(false);
+=======
+            if(players[i].isActivated == true && players[i].isLocked == true)
+            {
+                thePlayerData[usedPodiums].GetComponent<PodiumController>().AddPlayer(players[i]);
+                thePlayerData[usedPodiums].transform.position = podiumLocations[usedPodiums].transform.position;
+                thePlayerData[usedPodiums].gameObject.SetActive(true);
+                thePlayerData[usedPodiums].GetComponent<PodiumController>().SetTotal(total);
+                usedPodiums++;
+                SoundManager.Instance.SetBGMTempo(1);
+                SoundManager.Instance.SetBGM("Win");
+            }
+>>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
         }
 
         foreach (Player p in players)
