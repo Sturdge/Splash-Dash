@@ -39,49 +39,73 @@ public class ManageGame : MonoBehaviour
     private GameObject godPowerUp;
     private List<GameObject> playerObjects = new List<GameObject>();
     private LevelManager layoutManager;
-    public GridManager gridManager { get; private set; }
-    public DrawColor drawColor { get; private set; }
+    public GridManager gridManager
+    {
+        get; private set;
+    }
+    public DrawColor drawColor
+    {
+        get; private set;
+    }
     [SerializeField]
     private ObjectPooling objectPooling;
     [SerializeField]
     private Transform clockHand, pointA, pointB;
     [SerializeField]
     private float journeyLength;
-    public bool IsTimingDown { get => isTimingDown; set => isTimingDown = value; }
-    public Transform[] PlayerSpawnPositions { get => playerSpawnPositions; set => playerSpawnPositions = value; }
-    public Player[] Players { get => players; set => players = value; }
-    public List<GameObject> PlayerObjects { get => playerObjects; set => playerObjects = value; }
-    public List<GameObject> MapEdgesForGodPower { get => mapEdgesForGodPower; set => mapEdgesForGodPower = value; }
-    public GameObject GodPowerUp { get => godPowerUp; set => godPowerUp = value; }
-<<<<<<< HEAD
+    public bool IsTimingDown
+    {
+        get => isTimingDown; set => isTimingDown = value;
+    }
+    public Transform[] PlayerSpawnPositions
+    {
+        get => playerSpawnPositions; set => playerSpawnPositions = value;
+    }
+    public Player[] Players
+    {
+        get => players; set => players = value;
+    }
+    public List<GameObject> PlayerObjects
+    {
+        get => playerObjects; set => playerObjects = value;
+    }
+    public List<GameObject> MapEdgesForGodPower
+    {
+        get => mapEdgesForGodPower; set => mapEdgesForGodPower = value;
+    }
+    public GameObject GodPowerUp
+    {
+        get => godPowerUp; set => godPowerUp = value;
+    }
+
     private SpecialButton specialButton;
     private float timeLimit = 60;
 
-=======
+
 
     //Sound
     private SoundManager sm;
     bool finalStretch = false;
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
+
     //Creates instance of game manager
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
-        else if(instance != null)
+        else if (instance != null)
         {
             Destroy(gameObject);
         }
 
         clockHand.eulerAngles = v3Rot;
-<<<<<<< HEAD
+
 
         specialButton = GameObject.FindGameObjectWithTag("Special").GetComponent<SpecialButton>();
-=======
+
         sm = GameObject.Find("SoundManager").GetComponent<SoundManager>();
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
+
     }
     //handles display and counting of round timer
     [SerializeField]
@@ -110,23 +134,23 @@ public class ManageGame : MonoBehaviour
             //  string minutes = ((int)reverseTime / 60).ToString("00");
             //string seconds = ((int)reverseTime % 60).ToString("00");
             // timeRemaining.text = string.Format("{00:00}:{01:00}", minutes, seconds);
-<<<<<<< HEAD
+
             if (reverseTime >= timeLimit)
-=======
-            if (finalStretch == false)
-            {
-                if (reverseTime >= 50)
+
+                if (finalStretch == false)
                 {
-                    StartCoroutine("LerpTempo");
-                    
+                    if (reverseTime >= 50)
+                    {
+                        StartCoroutine("LerpTempo");
+
+                    }
                 }
-            }
 
             if (reverseTime >= 60)
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
+
             {
                 reverseTime = timeLimit;
-                if(OnGameWin != null)
+                if (OnGameWin != null)
                     OnGameWin();
                 objectPooling.DisableAll();
                 // loading.SetID(2);
@@ -258,7 +282,7 @@ public class ManageGame : MonoBehaviour
     //Activates round timer
     public void StartTimer()
     {
-      //  timeRemaining.gameObject.SetActive(true);
+        //  timeRemaining.gameObject.SetActive(true);
         isTimingDown = true;
         if (SoundManager.Instance != null)
         {
@@ -270,7 +294,7 @@ public class ManageGame : MonoBehaviour
     {
         finalStretch = true;
         float i = 1;
-        while(reverseTime < 58)
+        while (reverseTime < 58)
         {
             sm.SetBGMTempo(i);
             i += 0.0005f;
