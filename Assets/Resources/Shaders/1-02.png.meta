@@ -7,11 +7,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-<<<<<<< HEAD
-    sRGBTexture: 0
-=======
     sRGBTexture: 1
->>>>>>> c0a4daadf4b346a8673585be963f48b9c1abcf1d
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
