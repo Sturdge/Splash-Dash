@@ -107,7 +107,7 @@ public class EndGameScore : MonoBehaviour
                     thePlayerData[usedPodiums].gameObject.SetActive(true);
                     thePlayerData[usedPodiums].GetComponent<PodiumController>().SetTotal(total);
                     usedPodiums++;
-                    SoundManager.Instance.SetBGM("Win");
+                    //SoundManager.Instance.SetBGM("Win");
                 }
             }
             //Disables all score texts
