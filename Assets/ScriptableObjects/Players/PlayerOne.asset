@@ -15,8 +15,8 @@ MonoBehaviour:
   playerNum: 1
   isActivated: 1
   isLocked: 1
-  playerScore: 10
-  scorePercentage: 18.181818
+  playerScore: 30
+  scorePercentage: 3.7974684
   skinId: 2
   namesOfSkins:
   - Skin Red
@@ -26,14 +26,14 @@ MonoBehaviour:
   - Skin Orange
   - Skin Purple
   SkinColours:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.6, b: 0, a: 1}
-  - {r: 0.6, g: 0, b: 1, a: 1}
-  hasWon: 0
-  dashCount: 0
+  - {r: 1, g: 0.5647059, b: 0.57254905, a: 1}
+  - {r: 0.7490196, g: 0.8156863, b: 0.44705883, a: 1}
+  - {r: 0.5411765, g: 0.827451, b: 0.9098039, a: 1}
+  - {r: 0.9843137, g: 0.9647059, b: 0.54509807, a: 1}
+  - {r: 0.96862745, g: 0.6901961, b: 0.3137255, a: 1}
+  - {r: 0.81960785, g: 0.65882355, b: 0.9372549, a: 1}
+  hasWon: 1
+  dashCount: 381
   stunCount: 0
   powerUpsCount: 0
-  invulnerabilityCount: 0
+  invulnerabilityCount: 2
