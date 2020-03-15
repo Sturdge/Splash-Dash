@@ -59,8 +59,8 @@ public class PlayerController : MonoBehaviour
     private GameObject sImmunityObj;
     public GameObject SImunnityObj { get { return sImmunityObj; } }
     [SerializeField]
-    private GameObject teleportObject;
-    public GameObject TeleportObject { get { return teleportObject; } }
+    private GameObject _iceCube;
+    public GameObject IceCube { get { return _iceCube; } }
 
     [Header("Layer Masks")]
     [SerializeField]
@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     //Fields
     private Vector3 moveInput;
     private ObjectAudioHandler audioHandler;
+    private ExplodingPotato potato;
 
     //Auto Properties
     public float dashAmount { get; private set; }
@@ -136,9 +137,11 @@ public class PlayerController : MonoBehaviour
                         Player.StunCount++;
                         StartCoroutine(otherPlayer.PlayerStun.Stun(dashAmount,this));
                     }
-                            
 
                     Splat(dashAmount);
+
+                    if (potato != null)
+                        potato.OnHit(otherPlayer);
                 }
             }
         }
@@ -146,11 +149,7 @@ public class PlayerController : MonoBehaviour
         {
             if (IsDashing)
             {
-                if (!PlayerStun.Stunned)
-                {
-                    StartCoroutine(PlayerStun.Stun(dashAmount,this));
-                    Splat(dashAmount);
-                }
+                Splat(dashAmount);
             }
         }
     }
@@ -296,7 +295,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             CurrentPowerup = powerup;
-            CurrentPowerup.Start(this);
+            if(CurrentPowerup != null)
+                CurrentPowerup.Start(this);
         }
     }
 
