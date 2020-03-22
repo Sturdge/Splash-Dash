@@ -100,6 +100,9 @@ public class PlayerController : MonoBehaviour
     public delegate int CollectDelegate(int id);
     public event CollectDelegate collectEvent;
 
+    public delegate int TotalCollectDelegate(int id);
+    public event TotalCollectDelegate totalcollectEvent;
+
     private void Awake()
     {
         chc = GetComponent<CharacterController>();

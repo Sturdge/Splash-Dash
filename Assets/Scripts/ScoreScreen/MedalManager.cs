@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MedalManager : MonoBehaviour
 {
     private static MedalManager _instance;
@@ -16,6 +17,8 @@ public class MedalManager : MonoBehaviour
 
     public List<int> timesPowersCollected;
 
+    public List<int> totalPowersCollected;
+
     public GameObject GotStunnedMedal;
 
     public GameObject StunnedOthersMedal;
@@ -23,6 +26,8 @@ public class MedalManager : MonoBehaviour
     public GameObject MostDashesMedal;
 
     public GameObject MostPowersCollected;
+
+    public Text TotalPowerCollected;
 
     private void Awake()
     {
@@ -73,6 +78,12 @@ public class MedalManager : MonoBehaviour
         return i;
     }
 
+    public int OnTotalCollected(int i)
+    {
+        totalPowersCollected[i - 1] += 1;
+        return i;
+    }
+
 
     IEnumerator LateStart(float wait)
     {
@@ -96,6 +107,10 @@ public class MedalManager : MonoBehaviour
         foreach (PlayerController p in FindObjectsOfType<PlayerController>())
         {
             p.collectEvent += OnCollected;
+        }
+        foreach (PlayerController p in FindObjectsOfType<PlayerController>())
+        {
+            p.totalcollectEvent += OnTotalCollected;
         }
 
         //FindObjectOfType<DazeState>().stunEvent += OnPlayerStunned;
@@ -167,6 +182,24 @@ public class MedalManager : MonoBehaviour
 
         return current;
     }
+    public int GetTotalPowerPickup()
+    {
+        int max = 0;
+        int current = 0;
+        for (int i = 0; i == totalPowersCollected.Count; i++)
+        {
+            if (totalPowersCollected[i] ==max)
+            {
+                max = totalPowersCollected[i];
+                current = i;
+                GetComponent<Text>().text = "total Powerups collected" + totalPowersCollected.Count;
+            }
+            
+        }
+
+        return current;
+       
+    }
 
     public void SpawnMedal(Vector3 pos1, Vector3 pos2, Vector3 pos3, Vector3 pos4)
     {
@@ -181,5 +214,9 @@ public class MedalManager : MonoBehaviour
 
         GameObject _medal4 = Instantiate(MostPowersCollected, pos4 + (Vector3.up * 14), Quaternion.Euler(0, -90, 90));
         _medal4.transform.localScale = new Vector3(5, 5, 5);
+
+        
+
+
     }
 }

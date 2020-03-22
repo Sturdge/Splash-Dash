@@ -65,6 +65,7 @@ public class EndGameScore : MonoBehaviour
             int _currentPodiumStunOthers = 0;
             int _currentPodiumDash = 0;
             int _currentPodiumPickUp = 0;
+            int _currentPowerups = 0;
 
             foreach (Player p in sortedPlayers)
             {
@@ -86,6 +87,10 @@ public class EndGameScore : MonoBehaviour
                 if (p.playerNum == medalManager.GetTopPowerPickup())
                 {
                     _currentPodiumPickUp = p.playerNum;
+                }
+                if (p.playerNum == medalManager.GetTotalPowerPickup())
+                {
+                    _currentPowerups = p.playerNum;
                 }
             }
 
