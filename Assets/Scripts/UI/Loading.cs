@@ -68,8 +68,8 @@ public class Loading : MonoBehaviour
                 circleImg.fillAmount = 1f;
                 async.allowSceneActivation = true;
             }
-
-            yield return null;
         }
+
+        yield return null;
     }
 }

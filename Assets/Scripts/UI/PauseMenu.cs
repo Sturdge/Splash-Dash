@@ -7,6 +7,7 @@
  * Modified by: Dominik Waldowski
  */
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -61,7 +62,8 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        loading.SetID(0);
-        loading.InitializeLoading();
+       loading.SetID(0);
+       loading.InitializeLoading();
+       SceneManager.LoadScene(0);
     }
 }
