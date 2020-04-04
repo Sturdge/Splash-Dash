@@ -7362,7 +7362,7 @@ PrefabInstance:
         type: 3}
       propertyPath: logic
       value: 
-      objectReference: {fileID: 11400000, guid: 83e884026a92dd24195f003dcbb0752e,
+      objectReference: {fileID: 11400000, guid: 4b454fffc2ced6247887cc42e5789b9e,
         type: 2}
     - target: {fileID: 8354884952241502000, guid: 9f7ba8c21f95a104da053838d73e2e6d,
         type: 3}
