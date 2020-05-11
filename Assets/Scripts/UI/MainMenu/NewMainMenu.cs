@@ -20,8 +20,6 @@ public class NewMainMenu : MonoBehaviour
     private Transform confirmationMsg;
     [SerializeField]
     private Transform quitPanel;
-    [SerializeField]
-    private GameObject creditsBtn;
     [Header("Logic")]
     [SerializeField]
     private int selectId;
@@ -84,7 +82,6 @@ public class NewMainMenu : MonoBehaviour
         isTransition = false;
         confirmationMsg.gameObject.SetActive(false);
         quitPanel.gameObject.SetActive(false);
-        creditsBtn.gameObject.SetActive(true);
         canPressBtn = true;
         //Closed door 115.504 open door 24.249
         selectId = 0;
@@ -145,13 +142,17 @@ public class NewMainMenu : MonoBehaviour
 
             StartCoroutine(MoveCamera(controlsCameraPoint, 3, 1f));
         }
+
+        else if (selectId == 5)
+        {
+            SceneManager.LoadScene(11);
+        }
     }
     private IEnumerator CameraDown()
     {
         isTransition = true;
         canPressBtn = false;
         bool arrived = false;
-        creditsBtn.gameObject.SetActive(false);
         while (!arrived)
         {
             if (usingLerp == true)
@@ -202,7 +203,6 @@ public class NewMainMenu : MonoBehaviour
     private IEnumerator CameraSide()
     {
         previewingMedals = true;
-        creditsBtn.gameObject.SetActive(false);
         isTransition = true;
         canPressBtn = false;
         bool arrived = false;
@@ -228,7 +228,6 @@ public class NewMainMenu : MonoBehaviour
     private IEnumerator CameraControls()
     {
         previewingControls = true;
-        creditsBtn.gameObject.SetActive(false);
         isTransition = true;
         canPressBtn = false;
         bool arrived = false;
@@ -496,11 +495,5 @@ public class NewMainMenu : MonoBehaviour
         //canPressBtn = true;
 
         yield return null;
-    }
-
-    public void CreditsScene()
-    {
-        SceneManager.LoadScene(11);
-
     }
 }
