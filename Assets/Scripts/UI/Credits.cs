@@ -3,10 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
 {
-    public void BackToMenu()
+    [SerializeField]
+    private bool canPressBtn = true;
+
+    public void Update()
     {
         if (Input.GetButtonDown("BackButton"))
         {
+            canPressBtn = true;
             SceneManager.LoadScene(0);
         }
     }
