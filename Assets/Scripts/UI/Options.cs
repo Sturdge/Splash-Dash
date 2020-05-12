@@ -14,16 +14,19 @@ using UnityEngine.Audio;
 
 public class Options : MonoBehaviour
 {
-    [SerializeField]
-    private Transform resolutionSettingsPanel, soundSettingsPanel, controlSettingsPanel;         //stores all panels within first scene.
     private ControllerInputDetection controllerInput;
 
     #region Attributes
 
-    public AudioMixer gameMixer;
-    public Slider musicSlider;
-    public Slider sfxSlider;
-
+    [SerializeField]
+    private AudioMixer gameMixer;
+    [SerializeField]
+    private Slider musicSlider;
+    [SerializeField]
+    private Slider sfxSlider;
+    [SerializeField]
+    private Slider masterSlider;
+    [SerializeField]
     private SaveData Save;
 
     #region Player Pref Key Constants
@@ -33,12 +36,12 @@ public class Options : MonoBehaviour
     #endregion
 
     #region Resolution
-    [SerializeField]
+    /*[SerializeField]
     private Text resolutionText;
 
     private Resolution[] resolutions;
 
-    private int currentResolutionIndex = 0;
+    private int currentResolutionIndex = 0;*/
     #endregion
 
     #endregion
@@ -48,9 +51,14 @@ public class Options : MonoBehaviour
     private void Start()
     {
         controllerInput = GameObject.Find("EventSystem").GetComponent<ControllerInputDetection>();
-        Save = GameObject.Find("MainMenuCanvas").GetComponent<SaveData>();
-        resolutions = Screen.resolutions;
+        Save = GameObject.Find("SaveData").GetComponent<SaveData>();
+        //resolutions = Screen.resolutions;
 
+        musicSlider.value = SoundManager.Instance.MusicVol;
+        sfxSlider.value = SoundManager.Instance.SoundVol;
+        masterSlider.value = SoundManager.Instance.MasterVol;
+
+        #region OLD UNUSED CODE
         /*if (musicSlider && sfxSlider != null)
         {
            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
@@ -62,19 +70,19 @@ public class Options : MonoBehaviour
 
         //musicSlider.value = PlayerPrefs.GetFloat("musicVol", 0);
         //sfxSlider.value = PlayerPrefs.GetFloat("sfxVol", 0);
-        musicSlider.value = SoundManager.Instance.MusicVol;
-        sfxSlider.value = SoundManager.Instance.SoundVol;
 
-        currentResolutionIndex = PlayerPrefs.GetInt(Resolution_Pref_Key, 0);
+        //currentResolutionIndex = PlayerPrefs.GetInt(Resolution_Pref_Key, 0);
 
         //Set resolution Text to screens resolution on start up
-        SetResolutionText(resolutions[currentResolutionIndex]);
+        //SetResolutionText(resolutions[currentResolutionIndex]);
+
+        #endregion
     }
 
     //Cycling through Resolutions
     #region Resolution Cycling
 
-    //Setting resolution text
+    /*//Setting resolution text
     private void SetResolutionText(Resolution resolution)
     {
         resolutionText.text = resolution.width + "x" + resolution.height;
@@ -92,11 +100,11 @@ public class Options : MonoBehaviour
     {
         currentResolutionIndex = GetPreviousWrappedIndex(resolutions, currentResolutionIndex);
         SetResolutionText(resolutions[currentResolutionIndex]);
-    }
+    }*/
     #endregion
 
     //Applying the Resolution
-    #region Apply Resolution
+    /*#region Apply Resolution
 
     private void SetAndApplyResolution(int newResolutionIndex)
     {
@@ -138,10 +146,10 @@ public class Options : MonoBehaviour
     #endregion
 
     //Applying Resolution changes button
-    public void ApplyChanges()
+    /*public void ApplyChanges()
     {
         SetAndApplyResolution(currentResolutionIndex);
-    }
+    }*/
 
     //Applying music settings on button press
     public void ApplyMusicSettings()
@@ -150,32 +158,32 @@ public class Options : MonoBehaviour
     }
 
     //Setting volume levels
-    public void SetMusicVolume()
+    public void SetMusicVolume(float volume)
     {
-        // gameMixer.SetFloat("musicVol", volume);// Mathf.Log10(sliderValue) * 20);
-        //   SoundManager.Instance.MusicVol = volume;
-        float volume = musicSlider.value;
         SoundManager.Instance.SetBGMVol(volume);
     }
 
     public void SetSFXVolume(float volume)
     {
-        //gameMixer.SetFloat("sfxVol", volume);//Mathf.Log10(sliderValue) * 20);
-        // SoundManager.Instance.SoundVol = volume;
         SoundManager.Instance.SetSFXVol(volume);
     }
 
+    public void SetMasterVolume(float volume)
+    {
+        SoundManager.Instance.SetMasterVol(volume);
+    }
+
     //Opens resolution menu
-    public void ResolutionSettings()
+    /*public void ResolutionSettings()
     {
         resolutionSettingsPanel.gameObject.SetActive(true);
         soundSettingsPanel.gameObject.SetActive(false);
-    }
+    }*/
 
     //Opens sound menu
-    public void SoundSettings()
+    /*public void SoundSettings()
     {
         soundSettingsPanel.gameObject.SetActive(true);
         resolutionSettingsPanel.gameObject.SetActive(false);
-    }
+    }*/
 }
