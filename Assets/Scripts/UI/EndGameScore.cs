@@ -9,6 +9,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -51,6 +52,94 @@ public class EndGameScore : MonoBehaviour
         sortedPlayers.Clear();
         selectID = 0;
     }
+    List<Player> sortedInvinc = new List<Player>();
+    public List<Player> unassignedPlayers = new List<Player>();
+    private void AssignMedals()
+    {
+        unassignedPlayers.AddRange(players);
+        int amountOfMedals = 0;
+        for (int i = 0; i < players.Length; i++)
+        {
+           if(players[i].isActivated == true && players[i].isLocked == true)
+            {
+                amountOfMedals++;
+                medalManager.timesStunnedOthers[players[i].playerNum - 1] += players[i].StunCount;
+                medalManager.timesDashed[players[i].playerNum - 1] += players[i].DashCount;
+                medalManager.timesStunned[players[i].playerNum - 1] += players[i].InvulnerabilityCount;
+                medalManager.timesPowersCollected[players[i].playerNum - 1] += players[i].PowerUpsCount;
+            }
+        }
+       // Debug.Log(amountOfMedals);
+        int randomNum;
+        List<int> randomMedalCall = new List<int>();
+        randomMedalCall.Add(0); randomMedalCall.Add(1); randomMedalCall.Add(2); randomMedalCall.Add(3); randomMedalCall.Add(4);
+        for (int i = 0; i < amountOfMedals; i++)
+        {
+           // Debug.Log("Looped : " + i);
+            randomNum = Random.Range(0, randomMedalCall.Count);
+           // Debug.Log(randomMedalCall.Count);
+            GetMedal(randomMedalCall[randomNum], unassignedPlayers);
+            randomMedalCall.Remove(randomMedalCall[randomNum]);
+        }
+        medalManager.statsGames += 1;
+        //Spawns and adds invulnerability medal
+        //  Debug.Log(sortedInvinc[0]);
+
+    }
+
+    private void GetMedal(int medalTest, List<Player> sortType)
+    {
+        sortedInvinc.Clear();
+        sortedInvinc = sortType;
+        if(medalTest == 0)
+        {
+            //Most stunned player
+            sortedInvinc = sortedInvinc.OrderByDescending(o => o.InvulnerabilityCount).ToList();
+            //add to scores
+            medalManager.timesStunned[sortType[0].playerNum - 1] += 1;
+            medalManager.StatsStunned += 1;
+        }
+       
+        else if (medalTest == 1)
+        {
+            //Most stuns performed by the player
+            sortedInvinc = sortedInvinc.OrderByDescending(o => o.StunCount).ToList();
+            //add to medals
+            medalManager.statsStuns += 1;
+           // medalManager.timesStunnedOthers[sortType[0].playerNum - 1] += 1;
+        }
+        
+        else if (medalTest == 2)
+        {
+            //Most dashes performed
+            sortedInvinc = sortedInvinc.OrderByDescending(o => o.DashCount).ToList();
+            //medalManager.statsDash += 1;
+            medalManager.statsDash += 1;
+            
+           // medalManager.timesDashed[sortType[0].playerNum - 1] += 1;
+        }
+       
+        else if (medalTest == 3)
+        {
+            //most powerups performed
+            sortedInvinc = sortedInvinc.OrderByDescending(o => o.PowerUpsCount).ToList();
+            medalManager.statsPowerups += 1;
+           // medalManager.timesPowersCollected[sortType[0].playerNum - 1] += 1;
+        }
+        
+        else if (medalTest == 4)
+        {
+            //least amount of times stunned
+            sortedInvinc = sortedInvinc.OrderBy(o => o.InvulnerabilityCount).ToList();
+            medalManager.StatsInvin += 1;
+        }
+        // Debug.Log("pos: " + thePlayerData[sortType[0].playerNum].transform.position);]
+       // Debug.Log("Sort num: " + sortType[0]);
+        //Debug.Log(thePlayerData[sortType[0].playerNum]);
+        medalManager.SpawnMedal(thePlayerData[sortType[0].playerNum -1].transform.position, medalTest);
+        unassignedPlayers.Remove(sortType[0]);
+    }
+
     private void Start()
     {
 
@@ -60,114 +149,7 @@ public class EndGameScore : MonoBehaviour
         //loading = GameObject.Find("LoadManager").GetComponent<Loading>();
         sortedPlayers = players.OrderByDescending(o => o.playerScore).ToList();
         //sortedPlayers = players.OrderByDescending(o => o.scorePercentage).ToList();
-
-        #region stunMedal
-        int _currentPlayer = 0;
-
-        int[] _medalChosen = { 0, 0, 0, 0, 0 };
-
-        bool[] _medalClaimed = { false, false, false, false, false };
-
-        //int[] _medalsPerPlayer = { 0, 0, 0, 0 };
-
-        Dictionary<int, int> _medalsPerPlayer = new Dictionary<int, int>();
-
-        Dictionary<int, int> _medalForPlayer = new Dictionary<int, int>();
-
-        foreach (Player p in sortedPlayers)
-        {
-            int _medalAmount = 0;
-
-            if (p.playerNum == 0)
-            {
-                _medalAmount++;
-            }
-
-            if (p.playerNum == medalManager.GetTopStunned())
-            {
-                _medalAmount++;
-            }
-
-            if (p.playerNum == medalManager.GetTopStunOther())
-            {
-                _medalAmount++;
-            }
-
-            if (p.playerNum == medalManager.GetTopDashes())
-            {
-
-                _medalAmount++;
-            }
-
-            if (p.playerNum == medalManager.GetTopPowerPickup())
-            {
-                _medalAmount++;
-            }
-
-            if (p.playerNum == medalManager.GetUntouchable())
-            {
-                _medalAmount++;
-            }
-
-            _medalsPerPlayer.Add(p.playerNum, _medalAmount);
-        }
-
-        var _medalList = from pair in _medalsPerPlayer
-                         orderby pair.Value ascending
-                         select pair;
-
-
-        foreach (KeyValuePair<int, int> pair in _medalList)
-        {
-
-
-            if (pair.Key == medalManager.GetTopStunned() && _medalClaimed[0] == false)
-            {
-                if (pair.Key != 0)
-                {
-                    _medalClaimed[0] = true;
-                    _medalForPlayer.Add(pair.Key, 0);
-                }
-            }
-            else if (pair.Key == medalManager.GetTopStunOther() && _medalClaimed[1] == false)
-            {
-                if (pair.Key != 0)
-                {
-                    _medalClaimed[1] = true;
-                    _medalForPlayer.Add(pair.Key, 1);
-                }
-            }
-            else if (pair.Key == medalManager.GetTopDashes() && _medalClaimed[2] == false)
-            {
-                if (pair.Key != 0)
-                {
-                    _medalClaimed[2] = true;
-                    _medalForPlayer.Add(pair.Key, 2);
-                }
-            }
-            else if (pair.Key == medalManager.GetTopPowerPickup() && _medalClaimed[3] == false)
-            {
-                if (pair.Key != 0)
-                {
-                    _medalClaimed[3] = true;
-                    _medalForPlayer.Add(pair.Key, 3);
-                }
-            }
-            else if (pair.Key == medalManager.GetUntouchable() && _medalClaimed[4] == false)
-            {
-
-                _medalClaimed[4] = true;
-                _medalForPlayer.Add(pair.Key, 4);
-
-            }
-        }
-
-        foreach (KeyValuePair<int, int> pair in _medalForPlayer)
-        {
-            medalManager.SpawnMedal(podiumLocations[pair.Key].transform.position, pair.Value);
-        }
-        #endregion
-
+        //assigns winner
         for (int i = 0; i < sortedPlayers.Count; i++)
         {
             if (i == 0)
@@ -182,7 +164,7 @@ public class EndGameScore : MonoBehaviour
             total += p.playerScore;
 
         }
-
+        
         for (int i = 0; i < thePlayerData.Length; i++)
         {
             thePlayerData[i].gameObject.SetActive(false);
@@ -202,7 +184,10 @@ public class EndGameScore : MonoBehaviour
                 //SoundManager.Instance.SetBGM("Win");
             }
         }
+        
         StartCoroutine(WinnerCheck());
+        medalManager.ReadMedalSaveFile();
+        AssignMedals();
         medalManager.WriteMedalSaveFile();
     }
 
@@ -328,3 +313,112 @@ public class EndGameScore : MonoBehaviour
         yield return null;
     }
 }
+
+/* #region stunMedal
+        int _currentPlayer = 0;
+
+        int[] _medalChosen = { 0, 0, 0, 0, 0 };
+
+        bool[] _medalClaimed = { false, false, false, false, false };
+
+        //int[] _medalsPerPlayer = { 0, 0, 0, 0 };
+
+        Dictionary<int, int> _medalsPerPlayer = new Dictionary<int, int>();
+
+        Dictionary<int, int> _medalForPlayer = new Dictionary<int, int>();
+
+        foreach (Player p in sortedPlayers)
+        {
+            int _medalAmount = 0;
+
+            if (p.playerNum == 0)
+            {
+                _medalAmount++;
+            }
+
+            if (p.playerNum == medalManager.GetTopStunned())
+            {
+                _medalAmount++;
+            }
+
+            if (p.playerNum == medalManager.GetTopStunOther())
+            {
+                _medalAmount++;
+            }
+
+            if (p.playerNum == medalManager.GetTopDashes())
+            {
+
+                _medalAmount++;
+            }
+
+            if (p.playerNum == medalManager.GetTopPowerPickup())
+            {
+                _medalAmount++;
+            }
+
+            if (p.playerNum == medalManager.GetUntouchable())
+            {
+                _medalAmount++;
+            }
+
+            _medalsPerPlayer.Add(p.playerNum, _medalAmount);
+        }
+
+        var _medalList = from pair in _medalsPerPlayer
+                         orderby pair.Value ascending
+                         select pair;
+
+
+        foreach (KeyValuePair<int, int> pair in _medalList)
+        {
+            if (pair.Key == medalManager.GetTopStunned() && _medalClaimed[0] == false)
+            {
+                if (pair.Key != 0)
+                {
+                    Debug.Log("Claim1");
+                    _medalClaimed[0] = true;
+                    _medalForPlayer.Add(pair.Key, 0);
+                }
+            }
+            else if (pair.Key == medalManager.GetTopStunOther() && _medalClaimed[1] == false)
+            {
+                if (pair.Key != 0)
+                {
+                    _medalClaimed[1] = true;
+                    Debug.Log("Claim2");
+                    _medalForPlayer.Add(pair.Key, 1);
+                }
+            }
+            else if (pair.Key == medalManager.GetTopDashes() && _medalClaimed[2] == false)
+            {
+                if (pair.Key != 0)
+                {
+                    Debug.Log("Claim3");
+                    _medalClaimed[2] = true;
+                    _medalForPlayer.Add(pair.Key, 2);
+                }
+            }
+            else if (pair.Key == medalManager.GetTopPowerPickup() && _medalClaimed[3] == false)
+            {
+                if (pair.Key != 0)
+                {
+                    Debug.Log("Claim4");
+                    _medalClaimed[3] = true;
+                    _medalForPlayer.Add(pair.Key, 3);
+                }
+            }
+            else if (pair.Key == medalManager.GetUntouchable() && _medalClaimed[4] == false)
+            {
+                Debug.Log("Claim5");
+                _medalClaimed[4] = true;
+                _medalForPlayer.Add(pair.Key, 4);
+
+            }
+        }
+
+        foreach (KeyValuePair<int, int> pair in _medalForPlayer)
+        {
+            medalManager.SpawnMedal(podiumLocations[pair.Key].transform.position, pair.Value);
+        }
+        #endregion*/

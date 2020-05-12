@@ -12,6 +12,9 @@ public class MedalManager : MonoBehaviour
 
     public static MedalManager Instance { get { return _instance; } }
 
+    public int StatsStunned { get => statsStunned; set => statsStunned = value; }
+    public int StatsInvin { get => statsInvin; set => statsInvin = value; }
+
     public List<int> timesStunned;
 
     public List<int> timesDashed;
@@ -44,6 +47,9 @@ public class MedalManager : MonoBehaviour
 
     public int statsGames;
 
+    private int statsStunned;
+
+    private int statsInvin;
 
 
     private void Update()
@@ -71,6 +77,20 @@ public class MedalManager : MonoBehaviour
     }
     public void CountMedals()
     {
+       
+        medalCounts[0].text = "Most stunned: " + statsStunned;
+        medalCounts[1].text = "Most dashes: " + statsDash;
+        medalCounts[2].text = "Most stuns: " + statsStuns;
+        medalCounts[3].text = "Most powerups: " + statsPowerups;
+        if(medalCounts[4] != null)
+        {
+            medalCounts[4].text = "Most Invincible: " + StatsInvin;
+        }
+        CountStats();
+    }
+
+    void CountStats()
+    {
         int totaltimesStunned = 0, totaltimesDashed = 0, totaltimesStunnedOthers = 0, totaltimesPowersCollected = 0;
         for (int i = 0; i < timesStunned.Count; i++)
         {
@@ -79,23 +99,14 @@ public class MedalManager : MonoBehaviour
             totaltimesStunnedOthers += timesStunnedOthers[i];
             totaltimesPowersCollected += timesPowersCollected[i];
         }
-        totalMedalCounts[0] = totaltimesStunned;
-        totalMedalCounts[1] = totaltimesDashed;
-        totalMedalCounts[2] = totaltimesStunnedOthers;
-        totalMedalCounts[3] = totaltimesPowersCollected;
-        medalCounts[0].text = "Most stunned others: " + totalMedalCounts[0].ToString();
-        medalCounts[1].text = "Most dashes: " + totalMedalCounts[1].ToString();
-        //bonusStatCounts[2].text = "Games played:  " + totalGamesPlayed.ToString();
-        medalCounts[2].text = "Most Stuns " + totalMedalCounts[2].ToString();
-        medalCounts[3].text = "Most powerups: " + totalMedalCounts[3].ToString();
-    }
-
-    void CountStats()
-    {
-        bonusStatCounts[0].text = "Total stuns: " + statsStuns;
+        bonusStatCounts[0].text = "Total stunned: " + totaltimesStunned;
+        bonusStatCounts[1].text = "Total dashes: " + totaltimesDashed;
+        bonusStatCounts[2].text = "Total stuns " + totaltimesStunnedOthers;
+        bonusStatCounts[3].text = "Total powerups: " + totaltimesPowersCollected;
+        /*bonusStatCounts[0].text = "Total stuns: " + statsStuns;
         bonusStatCounts[1].text = "Total dashes: " + statsDash;
         bonusStatCounts[2].text = "Total games " + statsGames;
-        bonusStatCounts[3].text = "Total powerups: " + statsPowerups;
+        bonusStatCounts[3].text = "Total powerups: " + statsPowerups;*/
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -273,36 +284,40 @@ public class MedalManager : MonoBehaviour
 
     public void SpawnMedal(Vector3 pos, int whichMedal)
     {
-
         switch(whichMedal)
         {
             case (0):
                 {
                     GameObject _medal1 = Instantiate(GotStunnedMedal, pos + (Vector3.up * 14), Quaternion.Euler(0, -90, 90));
+                    _medal1.name = "Got Stunned Medal";
                     _medal1.transform.localScale = new Vector3(5, 5, 5);
                     break;
                 }
             case (1):
                 {
                     GameObject _medal2 = Instantiate(StunnedOthersMedal, pos + (Vector3.up * 14), Quaternion.Euler(0, -90, 90));
+                    _medal2.name = "Stunned Medal";
                     _medal2.transform.localScale = new Vector3(5, 5, 5);
                     break;
                 }
             case (2):
                 {
                     GameObject _medal3 = Instantiate(MostDashesMedal, pos + (Vector3.up * 14), Quaternion.Euler(0, -90, 90));
+                    _medal3.name = "Dash Medal";
                     _medal3.transform.localScale = new Vector3(5, 5, 5);
                     break;
                 }
             case (3):
                 {
                     GameObject _medal4 = Instantiate(MostPowersCollected, pos + (Vector3.up * 14), Quaternion.Euler(0, -90, 90));
+                    _medal4.name = "Most Powerups";
                     _medal4.transform.localScale = new Vector3(5, 5, 5);
                     break;
                 }
             case (4):
                 {
                     GameObject _medal5 = Instantiate(UntouchableMedal, pos + (Vector3.up * 14), Quaternion.Euler(0, -90, 90));
+                    _medal5.name = "Unbreakable Medal";
                     _medal5.transform.localScale = new Vector3(5, 5, 5);
                     break;
                 }

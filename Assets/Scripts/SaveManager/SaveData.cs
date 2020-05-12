@@ -24,6 +24,9 @@ public class SaveData : MonoBehaviour
 
     private int statsGames;
 
+    private int statsStunned;
+    private int statsInvuln;
+
 
 
     //save function saves all data
@@ -58,7 +61,9 @@ public class SaveData : MonoBehaviour
         statsDash = MedalManager.Instance.statsDash;
         statsPowerups = MedalManager.Instance.statsPowerups;
         statsStuns = MedalManager.Instance.statsStuns;
-        StatsGames = MedalManager.Instance.statsGames;
+        statsGames = MedalManager.Instance.statsGames;
+        statsStunned = MedalManager.Instance.StatsStunned;
+        statsInvuln = MedalManager.Instance.StatsInvin;
         SaveLoadManager.SavePlayerData(this);
     }
     /*public List<int> timesStunned;
@@ -98,10 +103,12 @@ public class SaveData : MonoBehaviour
             MedalManager.Instance.timesDashed[3] = (int)loadedSettings[15];
             MedalManager.Instance.timesStunnedOthers[3] = (int)loadedSettings[16];
             MedalManager.Instance.timesPowersCollected[3] = (int)loadedSettings[17];
-            MedalManager.Instance.statsStuns = (int)loadedSettings[18];
+            MedalManager.Instance.statsDash = (int)loadedSettings[18];
             MedalManager.Instance.statsPowerups = (int)loadedSettings[19];
             MedalManager.Instance.statsStuns = (int)loadedSettings[20];
             MedalManager.Instance.statsGames = (int)loadedSettings[21];
+            MedalManager.Instance.StatsStunned  = (int)loadedSettings[22];
+            MedalManager.Instance.StatsInvin = (int)loadedSettings[23];
         }
         catch
         {
@@ -120,4 +127,6 @@ public class SaveData : MonoBehaviour
     public int StatsPowerups { get => statsPowerups; set => statsPowerups = value; }
     public int StatsStuns { get => statsStuns; set => statsStuns = value; }
     public int StatsGames { get => statsGames; set => statsGames = value; }
+    public int StatsStunned { get => statsStunned; set => statsStunned = value; }
+    public int StatsInvuln { get => statsInvuln; set => statsInvuln = value; }
 }

@@ -111,6 +111,10 @@ public class DazeState : MonoBehaviour
                 ResetStun();
             }
         }
+        else if(Frozen == false && Stunned == false)
+        {
+            permaStunFix = 0;
+        }
     }
 
     private void ResetStun()
@@ -125,7 +129,7 @@ public class DazeState : MonoBehaviour
     }
 
     private float permaStunFix = 0;
-    private float maxStunDur = 4;
+    private float maxStunDur = 5;
 
     public IEnumerator Freeze()
     {

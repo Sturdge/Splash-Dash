@@ -58,7 +58,7 @@ public class PlayerData
     public PlayerData(SaveData saveData)
     {
         //size set
-        settings = new float[22];  //2,6,10,14
+        settings = new float[24];  //2,6,10,14
         //Assign Values
         settings[0] = saveData.MusicVal;
         settings[1] = saveData.SoundVal;
@@ -87,5 +87,7 @@ public class PlayerData
         settings[19] = saveData.StatsPowerups;
         settings[20] = saveData.StatsStuns;
         settings[21] = saveData.StatsGames;
+        settings[22] = saveData.StatsStunned;
+        settings[23] = saveData.StatsInvuln;
     }
 }
