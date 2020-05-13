@@ -66,6 +66,7 @@ public class CountdownTimer : MonoBehaviour
                 ManageGame.instance.StartTimer();
                 isCounting = false;
                 soundManager = SoundManager.Instance;
+                soundManager.StartSong();
                 //soundManager.AudioSource.Play();
             }          
         }

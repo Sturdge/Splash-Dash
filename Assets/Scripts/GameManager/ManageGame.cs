@@ -55,7 +55,7 @@ public class ManageGame : MonoBehaviour
     public List<GameObject> MapEdgesForGodPower { get => mapEdgesForGodPower; set => mapEdgesForGodPower = value; }
     public GameObject GodPowerUp { get => godPowerUp; set => godPowerUp = value; }
     public SpecialButton SpecialButton { get; private set; }
-    private float timeLimit = 60;
+    private float timeLimit = 90;
     public CameraShaker camShake { get; private set; }
     public List<PlayerController> allPlayerControllers { get; private set; }
     [SerializeField]
@@ -141,7 +141,7 @@ public class ManageGame : MonoBehaviour
     {
         if (isTimingDown == true)
         {
-            v3Rot = Vector3.MoveTowards(v3Rot, v3Dest, speed * Time.deltaTime);
+            v3Rot = Vector3.MoveTowards(v3Rot, v3Dest, (speed * 0.65f) * Time.deltaTime);
             v3Rot.y = 90;
             v3Rot.z = 0;
             //Debug.Log(reverseTime);
