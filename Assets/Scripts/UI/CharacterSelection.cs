@@ -60,6 +60,7 @@ public class CharacterSelection : MonoBehaviour
     //checks if all players are locked in
     public void AllPlayersReadyCheck()
     {
+
         bool canStart = true;
         int activePlayer = 0;
         for (int i = 0; i < players.Length; i++)

@@ -6781,6 +6781,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 211228733}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &211473338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2012178578}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211473339}
+  m_Layer: 0
+  m_Name: SpiceJar2_Current (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211473339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2012178578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211473338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2012178579}
+  m_Father: {fileID: 2081889171}
+  m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212241097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8359,6 +8390,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfdfd72a5af8f754dad4feea2321ecd9, type: 3}
+--- !u!1 &409228971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 941285206}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941285207}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &409682716
 GameObject:
   m_ObjectHideFlags: 0
@@ -8747,6 +8794,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 427842372}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &428258477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1308469517}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428258478}
+  m_Layer: 0
+  m_Name: SpiceJar2_Current (2) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428258478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1308469517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428258477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1308469518}
+  m_Father: {fileID: 2081889171}
+  m_RootOrder: 58
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &447541208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9128,11 +9206,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2081889171}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 102e8b644aae33942bc85b8917749703,
+    - target: {fileID: -4231304516395236936, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
-      propertyPath: m_Name
-      value: SpiceJar1_Current
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dc51de6250fcc34da0dff0ef6f48768, type: 2}
     - target: {fileID: -4216859302048453862, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9188,29 +9266,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -242020405210463942, guid: 102e8b644aae33942bc85b8917749703,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8946e00f91e071b4a9429ca7797fdc2a, type: 2}
-    - target: {fileID: -4231304516395236936, guid: 102e8b644aae33942bc85b8917749703,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1dc51de6250fcc34da0dff0ef6f48768, type: 2}
     - target: {fileID: -3800633853536874722, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cdcab4a0808de9b4ead0f6ef5224ebee, type: 2}
+    - target: {fileID: -927199367670048503, guid: 102e8b644aae33942bc85b8917749703,
+        type: 3}
+      propertyPath: m_Name
+      value: SpiceJar1_Current
+      objectReference: {fileID: 0}
+    - target: {fileID: -242020405210463942, guid: 102e8b644aae33942bc85b8917749703,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8946e00f91e071b4a9429ca7797fdc2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 102e8b644aae33942bc85b8917749703, type: 3}
---- !u!4 &477975022 stripped
+--- !u!4 &477975022
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 102e8b644aae33942bc85b8917749703,
     type: 3}
   m_PrefabInstance: {fileID: 477975021}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975675733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1618094280}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &487844106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9308,11 +9395,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2081889171}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 102e8b644aae33942bc85b8917749703,
+    - target: {fileID: -4231304516395236936, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
-      propertyPath: m_Name
-      value: SpiceJar1_Current (3)
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f1dd60109ccdee4c9892de2e4fe766a, type: 2}
     - target: {fileID: -4216859302048453862, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9368,29 +9455,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -242020405210463942, guid: 102e8b644aae33942bc85b8917749703,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8946e00f91e071b4a9429ca7797fdc2a, type: 2}
-    - target: {fileID: -4231304516395236936, guid: 102e8b644aae33942bc85b8917749703,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0f1dd60109ccdee4c9892de2e4fe766a, type: 2}
     - target: {fileID: -3800633853536874722, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cdcab4a0808de9b4ead0f6ef5224ebee, type: 2}
+    - target: {fileID: -927199367670048503, guid: 102e8b644aae33942bc85b8917749703,
+        type: 3}
+      propertyPath: m_Name
+      value: SpiceJar1_Current (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -242020405210463942, guid: 102e8b644aae33942bc85b8917749703,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8946e00f91e071b4a9429ca7797fdc2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 102e8b644aae33942bc85b8917749703, type: 3}
---- !u!4 &498684090 stripped
+--- !u!4 &498684090
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 102e8b644aae33942bc85b8917749703,
     type: 3}
   m_PrefabInstance: {fileID: 498684089}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112217466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1338730674}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &504703088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11455,6 +11551,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2034507790945475762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727088427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1308469517}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308469518}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &728612993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11542,11 +11654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2081889171}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
-        type: 3}
-      propertyPath: m_Name
-      value: SpiceJar2_Current (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11602,16 +11709,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7452492236238991088, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
+    - target: {fileID: -927199367670048503, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b6804cb178bd4a44ea8109103ca5ede6, type: 2}
+      propertyPath: m_Name
+      value: SpiceJar2_Current (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1510311910922874210, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1cd13f2d70c31954b8548941a85b5e67, type: 2}
+    - target: {fileID: 7452492236238991088, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6804cb178bd4a44ea8109103ca5ede6, type: 2}
     - target: {fileID: 8319237870720788728, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11619,12 +11731,21 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c2a1997d180bc241b2f280dd5f92bb0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5, type: 3}
---- !u!4 &728952049 stripped
+--- !u!4 &728952049
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
     type: 3}
   m_PrefabInstance: {fileID: 728952048}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811796576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 943322810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &730410029
 GameObject:
   m_ObjectHideFlags: 0
@@ -12179,6 +12300,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775428179}
   m_Mesh: {fileID: -8248113518079864922, guid: 7b281e6aeda014c4f8ad86757cfd730d, type: 3}
+--- !u!1 &787102450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2012178578}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012178579}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &793156232
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,11 +13688,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2081889171}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 102e8b644aae33942bc85b8917749703,
+    - target: {fileID: -4231304516395236936, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
-      propertyPath: m_Name
-      value: SpiceJar1_Current (1)
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0804e0edde94cdb44b8494aac7ed9d42, type: 2}
     - target: {fileID: -4216859302048453862, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13611,29 +13748,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -242020405210463942, guid: 102e8b644aae33942bc85b8917749703,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8946e00f91e071b4a9429ca7797fdc2a, type: 2}
-    - target: {fileID: -4231304516395236936, guid: 102e8b644aae33942bc85b8917749703,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0804e0edde94cdb44b8494aac7ed9d42, type: 2}
     - target: {fileID: -3800633853536874722, guid: 102e8b644aae33942bc85b8917749703,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cdcab4a0808de9b4ead0f6ef5224ebee, type: 2}
+    - target: {fileID: -927199367670048503, guid: 102e8b644aae33942bc85b8917749703,
+        type: 3}
+      propertyPath: m_Name
+      value: SpiceJar1_Current (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -242020405210463942, guid: 102e8b644aae33942bc85b8917749703,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8946e00f91e071b4a9429ca7797fdc2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 102e8b644aae33942bc85b8917749703, type: 3}
---- !u!4 &941285207 stripped
+--- !u!4 &941285207
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 102e8b644aae33942bc85b8917749703,
     type: 3}
   m_PrefabInstance: {fileID: 941285206}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409228971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1075975136}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &943322809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 728952048}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943322810}
+  m_Layer: 0
+  m_Name: SpiceJar2_Current (1) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &943322810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 728952048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943322809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 728952049}
+  m_Father: {fileID: 2081889171}
+  m_RootOrder: 56
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &956872007
 GameObject:
   m_ObjectHideFlags: 0
@@ -15143,6 +15320,37 @@ MonoBehaviour:
     _audio: {fileID: 8300000, guid: b49142cce3eda28448eac918aa5f2fd8, type: 3}
   - _name: Cancel
     _audio: {fileID: 8300000, guid: fcd9d20338bcfb4469a8d5fc9aa5b0f2, type: 3}
+--- !u!1 &1075975135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 941285206}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1075975136}
+  m_Layer: 0
+  m_Name: SpiceJar1_Current (1) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1075975136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 941285206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075975135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 941285207}
+  m_Father: {fileID: 2081889171}
+  m_RootOrder: 59
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1087201779
 GameObject:
   m_ObjectHideFlags: 0
@@ -20592,6 +20800,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4794409967018104217, guid: a42cb2a26904f2c4baabeaf6de461f37,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e0128f63bc5bfe544bc4946a3083385e, type: 2}
+    - target: {fileID: 7856554004365406033, guid: a42cb2a26904f2c4baabeaf6de461f37,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 813c9e2e3c3c1ec40ba37f564da86138, type: 2}
     - target: {fileID: -1741425680511896916, guid: a42cb2a26904f2c4baabeaf6de461f37,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -20612,16 +20830,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 40.099003
       objectReference: {fileID: 0}
-    - target: {fileID: -4794409967018104217, guid: a42cb2a26904f2c4baabeaf6de461f37,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e0128f63bc5bfe544bc4946a3083385e, type: 2}
-    - target: {fileID: 7856554004365406033, guid: a42cb2a26904f2c4baabeaf6de461f37,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 813c9e2e3c3c1ec40ba37f564da86138, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42cb2a26904f2c4baabeaf6de461f37, type: 3}
 --- !u!4 &1155407225 stripped
@@ -21624,11 +21832,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2081889171}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
-        type: 3}
-      propertyPath: m_Name
-      value: SpiceJar2_Current (2)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21684,16 +21887,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7452492236238991088, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
+    - target: {fileID: -927199367670048503, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b6804cb178bd4a44ea8109103ca5ede6, type: 2}
+      propertyPath: m_Name
+      value: SpiceJar2_Current (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 1510311910922874210, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1cd13f2d70c31954b8548941a85b5e67, type: 2}
+    - target: {fileID: 7452492236238991088, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6804cb178bd4a44ea8109103ca5ede6, type: 2}
     - target: {fileID: 8319237870720788728, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21701,12 +21909,21 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 79bab796d7b21174cae34688f4adb1d9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5, type: 3}
---- !u!4 &1308469518 stripped
+--- !u!4 &1308469518
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
     type: 3}
   m_PrefabInstance: {fileID: 1308469517}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727088427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 428258478}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1310108194
 GameObject:
   m_ObjectHideFlags: 0
@@ -22076,6 +22293,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1328753041}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1338730673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 498684089}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338730674}
+  m_Layer: 0
+  m_Name: SpiceJar1_Current (3) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338730674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 498684089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338730673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 498684090}
+  m_Father: {fileID: 2081889171}
+  m_RootOrder: 57
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341334988
 GameObject:
   m_ObjectHideFlags: 0
@@ -29447,6 +29695,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1616503886}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1618094279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 477975021}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618094280}
+  m_Layer: 0
+  m_Name: SpiceJar1_Current (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618094280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 477975021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618094279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 477975022}
+  m_Father: {fileID: 2081889171}
+  m_RootOrder: 61
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1631025035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40899,6 +41178,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1289099523112448075}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1811796576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 728952048}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728952049}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1816630198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41894,6 +42189,22 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!1 &1975675733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 477975021}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477975022}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1976592695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42270,11 +42581,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2081889171}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
-        type: 3}
-      propertyPath: m_Name
-      value: SpiceJar2_Current
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -42330,16 +42636,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7452492236238991088, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
+    - target: {fileID: -927199367670048503, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b6804cb178bd4a44ea8109103ca5ede6, type: 2}
+      propertyPath: m_Name
+      value: SpiceJar2_Current
+      objectReference: {fileID: 0}
     - target: {fileID: 1510311910922874210, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1cd13f2d70c31954b8548941a85b5e67, type: 2}
+    - target: {fileID: 7452492236238991088, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6804cb178bd4a44ea8109103ca5ede6, type: 2}
     - target: {fileID: 8319237870720788728, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -42347,12 +42658,21 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7c25d8d8a7651c54782711c1bee59097, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5, type: 3}
---- !u!4 &2012178579 stripped
+--- !u!4 &2012178579
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b6f0620a3fb1ac948a4bb7eb5579c2d5,
     type: 3}
   m_PrefabInstance: {fileID: 2012178578}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787102450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 211473339}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2014078306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42902,7 +43222,17 @@ PrefabInstance:
     - target: {fileID: 7772228152695579725, guid: aecf92513357b114690d0d3f7cc50de9,
         type: 3}
       propertyPath: musicVol
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772228152695579725, guid: aecf92513357b114690d0d3f7cc50de9,
+        type: 3}
+      propertyPath: masterVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772228152695579725, guid: aecf92513357b114690d0d3f7cc50de9,
+        type: 3}
+      propertyPath: soundVol
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecf92513357b114690d0d3f7cc50de9, type: 3}
@@ -48201,12 +48531,12 @@ Transform:
   - {fileID: 1397227344}
   - {fileID: 1251473734}
   - {fileID: 837552377}
-  - {fileID: 728952049}
-  - {fileID: 498684090}
-  - {fileID: 1308469518}
-  - {fileID: 941285207}
-  - {fileID: 2012178579}
-  - {fileID: 477975022}
+  - {fileID: 943322810}
+  - {fileID: 1338730674}
+  - {fileID: 428258478}
+  - {fileID: 1075975136}
+  - {fileID: 211473339}
+  - {fileID: 1618094280}
   - {fileID: 1171294503}
   - {fileID: 35349172}
   - {fileID: 1725392142}
@@ -48675,6 +49005,22 @@ MonoBehaviour:
   - {fileID: 2074459657}
   - {fileID: 167047500}
   - {fileID: 1767483054}
+--- !u!1 &2112217466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 498684089}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498684090}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!23 &8432209260609354
 MeshRenderer:
   m_ObjectHideFlags: 0

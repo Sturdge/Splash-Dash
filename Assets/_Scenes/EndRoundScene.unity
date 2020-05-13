@@ -407,6 +407,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
+    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk_Bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 994189058974352406, guid: d8d0c1bb285ff4e41a4f0832181d1687,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -461,16 +471,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
-        type: 3}
-      propertyPath: m_Name
-      value: Milk_Bottle (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8d0c1bb285ff4e41a4f0832181d1687, type: 3}
@@ -1033,16 +1033,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Name
-      value: SodaCan (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5703609814412677708, guid: 0694a0cb7a9148944bda28da30fd6146,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1098,6 +1088,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Name
+      value: SodaCan (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0694a0cb7a9148944bda28da30fd6146, type: 3}
 --- !u!4 &369561637 stripped
@@ -1143,6 +1143,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
+    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk_Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 994189058974352406, guid: d8d0c1bb285ff4e41a4f0832181d1687,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1197,16 +1207,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
-        type: 3}
-      propertyPath: m_Name
-      value: Milk_Bottle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8d0c1bb285ff4e41a4f0832181d1687, type: 3}
@@ -1837,6 +1837,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
+    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk_Bottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 994189058974352406, guid: d8d0c1bb285ff4e41a4f0832181d1687,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1891,16 +1901,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
-        type: 3}
-      propertyPath: m_Name
-      value: Milk_Bottle (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4293980443179087365, guid: d8d0c1bb285ff4e41a4f0832181d1687,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8d0c1bb285ff4e41a4f0832181d1687, type: 3}
@@ -2224,16 +2224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Name
-      value: SodaCan (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5703609814412677708, guid: 0694a0cb7a9148944bda28da30fd6146,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2288,6 +2278,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Name
+      value: SodaCan (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0694a0cb7a9148944bda28da30fd6146, type: 3}
@@ -2384,16 +2384,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Name
-      value: SodaCan (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5703609814412677708, guid: 0694a0cb7a9148944bda28da30fd6146,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2448,6 +2438,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Name
+      value: SodaCan (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0694a0cb7a9148944bda28da30fd6146, type: 3}
@@ -3078,6 +3078,7 @@ MonoBehaviour:
   - {fileID: 252815598}
   - {fileID: 2097133581}
   sceneToLoad: 7
+  unassignedPlayers: []
 --- !u!1 &1352782752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,16 +3335,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352782753}
     m_Modifications:
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Name
-      value: SodaCan
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5703609814412677708, guid: 0694a0cb7a9148944bda28da30fd6146,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3398,6 +3389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Name
+      value: SodaCan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792360579194858647, guid: 0694a0cb7a9148944bda28da30fd6146,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0694a0cb7a9148944bda28da30fd6146, type: 3}
