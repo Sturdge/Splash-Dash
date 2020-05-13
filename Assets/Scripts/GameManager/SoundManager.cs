@@ -175,7 +175,13 @@ public class SoundManager : MonoBehaviour
     public void PlayGameTheme()
     {
         SetBGM("Game Theme");
-        audioSource.loop = true;
+        audioSource.loop = false;
+        audioSource.enabled = false;
+    }
+
+    public void StartSong()
+    {
+        audioSource.enabled = true;
     }
 
     public void PlayEndTheme()
