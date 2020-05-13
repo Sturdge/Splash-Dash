@@ -111,18 +111,18 @@ public class CustomSlider : MonoBehaviour
                 {
                     value = 0;
                 }
-                adjustedValue = value / 100;
+                adjustedValue = (value * 2) / 100;
                 SaveSettings();
             }
             else if (Input.GetAxis("Horizontal") < -0.3f)
             {
                 value -= Time.deltaTime * rateOfDrag * drag;
                 drag += Time.deltaTime * dragSpeed;
-                if (value <= -80)
+                if (value <= -50)
                 {
-                    value = -80;
+                    value = -50;
                 }
-                adjustedValue = value / 100;
+                adjustedValue = (value * 2) / 100;
                 SaveSettings();
             }
             else
