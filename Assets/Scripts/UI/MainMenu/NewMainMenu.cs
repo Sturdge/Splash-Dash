@@ -9,6 +9,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NewMainMenu : MonoBehaviour
 {
@@ -140,6 +141,11 @@ public class NewMainMenu : MonoBehaviour
             //StartCoroutine("CameraControls");
 
             StartCoroutine(MoveCamera(controlsCameraPoint, 3, 1f));
+        }
+
+        else if (selectId == 5)
+        {
+            SceneManager.LoadScene(11);
         }
     }
     private IEnumerator CameraDown()
