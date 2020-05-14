@@ -180,10 +180,6 @@ public class PlayerController : MonoBehaviour
         {
             if (IsDashing)
             {
-                SecondaryObjCollector objCollector = other.GetComponent<SecondaryObjCollector>();
-                if (objCollector.HasSecondaryObj && objCollector.SecondaryObj != null)
-                    objCollector.DropSecondaryObj();
-
                 PlayerController otherPlayer = other.gameObject.GetComponent<PlayerController>();
                 if (!otherPlayer.IsDashing)
                 {
