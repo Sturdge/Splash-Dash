@@ -13,17 +13,20 @@ public class PauseMenu : MonoBehaviour
 {
     private bool GameIsPaused = false;
     private GameObject pauseMenu;
+    private GameObject optionsMenu;
     //private Loading loading;
 
     private void Awake()
     {
         pauseMenu = GameObject.Find("PausePanel").gameObject;
+        optionsMenu = GameObject.Find("OptionsPanel").gameObject;
         //loading = GameObject.Find("LoadingManager").GetComponent<Loading>();
     }
 
     private void Start()
     {
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -63,11 +66,24 @@ public class PauseMenu : MonoBehaviour
 
     public void Options()
     {
+        optionsMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
 
+    }
+
+    public void CloseOptionsMenu()
+    {
+        optionsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 
     public void QuitGame()
     {
-        SceneManager.LoadScene(10);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(10, LoadSceneMode.Single);
     }
 }

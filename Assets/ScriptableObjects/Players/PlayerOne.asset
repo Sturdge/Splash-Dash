@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlayerOne
   m_EditorClassIdentifier: 
   playerNum: 1
-  isActivated: 0
-  isLocked: 0
+  isActivated: 1
+  isLocked: 1
   playerScore: 1
-  scorePercentage: 25
+  scorePercentage: 33.333332
   skinId: 0
   namesOfSkins:
   - Skin Red
@@ -39,8 +39,8 @@ MonoBehaviour:
   - {r: 1, g: 0.89019614, b: 0.5294118, a: 1}
   - {r: 1, g: 0.6666667, b: 0.37254903, a: 1}
   - {r: 0.854902, g: 0.61960787, b: 1, a: 1}
-  hasWon: 0
-  dashCount: 0
-  stunCount: 0
-  powerUpsCount: 0
-  invulnerabilityCount: 0
+  hasWon: 1
+  dashCount: 2
+  stunCount: 5
+  powerUpsCount: 7
+  invulnerabilityCount: 8

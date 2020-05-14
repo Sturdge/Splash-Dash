@@ -48,6 +48,7 @@ public class DazeState : MonoBehaviour
 
     private void Start()
     {
+        permaStunFix = 0;
         playerbase = GetComponent<PlayerBase>();
         character = GetComponent<CharacterController>();
         playerController = GetComponent<PlayerController>();
@@ -98,6 +99,37 @@ public class DazeState : MonoBehaviour
             }
         }
     }
+
+    //PErma stun fix
+    private void Update()
+    {
+        if(Frozen == true || Stunned == true)
+        {
+            permaStunFix += Time.deltaTime;
+            if(permaStunFix >= maxStunDur)
+            {
+                ResetStun();
+            }
+        }
+        else if(Frozen == false && Stunned == false)
+        {
+            permaStunFix = 0;
+        }
+    }
+
+    private void ResetStun()
+    {
+        CanMove = true;
+        Frozen = false;
+        Stunned = false;
+        cooldownTime = cooldownTimeMax;
+        playerController.IceCube.SetActive(false);
+        permaStunFix = 0;
+        StartCoroutine(StunCooldown(cooldownTime));
+    }
+
+    private float permaStunFix = 0;
+    private float maxStunDur = 5;
 
     public IEnumerator Freeze()
     {

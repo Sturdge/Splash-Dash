@@ -62,7 +62,14 @@ public class GridManager : MonoBehaviour
             Percentages[i] = 0f;
         }
 
-        InitialiseBars();
+        try
+        {
+            InitialiseBars();
+        }
+        catch
+        {
+            Debug.LogWarning("Failed To initialise bars line 65 Grid Manager Script");
+        }
 
         //Updating defaults to false
         updating = false;
@@ -331,7 +338,7 @@ public class GridManager : MonoBehaviour
         Vector3 newPosition = new Vector3
         {
             x = newPos.x,
-            y = 2.5f,
+            y = -1.8f,
             z = newPos.z
         };
         

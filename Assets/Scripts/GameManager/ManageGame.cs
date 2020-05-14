@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ManageGame : MonoBehaviour
 {
@@ -60,9 +61,13 @@ public class ManageGame : MonoBehaviour
     [SerializeField]
     private int scoreLevelID;
 
+    [SerializeField]
+    private GameObject gameOverImage;
+
     //Creates instance of game manager
     private void Awake()
     {
+        
         if(instance == null)
         {
             instance = this;
@@ -71,7 +76,52 @@ public class ManageGame : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        int check = 0;
+        for (int i = 0; i < players.Length; i++)
+        {
+            if(players[i].isActivated == true)
+            {
+                check++;
+            }
+        }
+        if(check < 2)
+        {
+            Debug.LogWarning("Less than 2 players initiated error!, commencing player prefs load");
+            for (int i = 0; i < players.Length; i++)
+            {
+               int tempLock=  PlayerPrefs.GetInt("Locked" + players[i].playerNum);
+                int tempActiv = PlayerPrefs.GetInt("Activated" + players[i].playerNum);
+                int tempSkin = PlayerPrefs.GetInt("SkinId" + players[i].playerNum);
+                if (tempLock == 1)
+                {
+                    players[i].isLocked = true;
+                }
+                if(tempActiv == 1)
+                {
+                    players[i].isActivated = true;
+                }
+                players[i].skinId = tempSkin;
 
+                //PlayerPrefs.SetInt("Locked" + player.playerNum, 1);
+              //  PlayerPrefs.SetInt("Activated" + player.playerNum, 1);
+               // PlayerPrefs.SetInt("SkinId" + player.playerNum, position);
+            }
+        }
+        else
+        {
+            //Debug.Log("Loaded without issues");
+            for (int i = 0; i < players.Length; i++)
+            {
+                if (players[i].isActivated == true && players[i].isLocked == true)
+                {
+                    int tempSkin = PlayerPrefs.GetInt("SkinId" + players[i].playerNum);
+                    if(players[i].skinId != tempSkin)
+                    {
+                        players[i].skinId = tempSkin;
+                    }
+                }
+            }
+        }
         clockHand.eulerAngles = v3Rot;
 
         
@@ -114,7 +164,7 @@ public class ManageGame : MonoBehaviour
                 // loading.SetID(2);
                 // loading.InitializeLoading();
                 gridManager.CalculateFinalScore();
-                SceneManager.LoadScene(scoreLevelID);
+                StartCoroutine(GameFinish());
             }
             if (reverseTime % gridManager.TimeToCheck < 1 && reverseTime > 1) //Modulus operator to check if the value of reverseTime goes into TimeToCheck with a remainder that is less than 1, i.e. 60.23416 % 30 = 0.23416, 70.81674 % 30 = 10.81674 etc. -James
                 gridManager.UpdateElements();
@@ -237,5 +287,14 @@ public class ManageGame : MonoBehaviour
         {
             SoundManager.Instance.PlayGameTheme();
         }
+    }
+
+    private IEnumerator GameFinish()
+    {
+        gameOverImage.SetActive(true);
+        IsTimingDown = false;
+        yield return new WaitForSeconds(3);
+        gameOverImage.SetActive(false);
+        SceneManager.LoadScene(scoreLevelID);
     }
 }

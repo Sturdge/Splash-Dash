@@ -14,6 +14,7 @@ using System;
 public class NewCharacterSelectionController : MonoBehaviour
 {
     private ControllerNav controlNav;
+    [SerializeField]
     private bool isConfirmation;
     [SerializeField]
     private Transform readyMsgBar;
@@ -56,6 +57,7 @@ public class NewCharacterSelectionController : MonoBehaviour
     private int forceLevel;
 
     public bool CanPressBtn { get => canPressBtn; set => canPressBtn = value; }
+    public bool IsConfirmation { get => isConfirmation; set => isConfirmation = value; }
 
     private void Awake()
     {
@@ -221,7 +223,8 @@ public class NewCharacterSelectionController : MonoBehaviour
     //Movement of camera to main menu
     private void ReturnToMainMenu()
     {
-        StartCoroutine("CameraUp");
+        //StartCoroutine("CameraUp");
+        StartCoroutine(MoveCamera(mainMenuCameraPoint, 0.5f));
     }
 
     //Movement of camera to main menu
@@ -250,9 +253,39 @@ public class NewCharacterSelectionController : MonoBehaviour
         yield return null;
     }
 
+    private IEnumerator MoveCamera(Transform destination, float time)
+    {
+        canPressBtn = false;
+
+        bool arrived = false;
+
+        float t = 0;
+        while (t <= time)
+        {
+            cameraTransform.position = Vector3.Lerp(cameraTransform.position, destination.position, t / time);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, destination.rotation, t / time);
+            //if (Vector3.Distance(cameraTransform.position, destination.position) < 0.01f) arrived = true;
+
+            t += Time.deltaTime;
+
+
+            yield return null;
+        }
+        
+        //yield return new WaitForSeconds(waitBetweenAnimation);
+        cameraTransform.position = destination.position;
+        cameraTransform.rotation = destination.rotation;
+        arrived = true;
+        MenuController.instance.CharacterSelectionToMainMenu();
+
+        //canPressBtn = true;
+
+        yield return null;
+    }
+
     private IEnumerator OpenFridge()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.1f);
         doorAnimation.enabled = true;
         doorAnimation.speed = animationSpeed;
         doorAnimation.SetInteger("CloseAnim", 1);
