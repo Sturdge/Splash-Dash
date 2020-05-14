@@ -67,12 +67,18 @@ public class PauseMenu : MonoBehaviour
     public void Options()
     {
         optionsMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
 
     }
 
     public void CloseOptionsMenu()
     {
         optionsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 
     public void QuitGame()

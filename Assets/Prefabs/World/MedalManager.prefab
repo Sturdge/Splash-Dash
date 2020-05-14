@@ -56,7 +56,7 @@ MonoBehaviour:
     type: 3}
   MostPowersCollected: {fileID: 2802677266820014167, guid: 0bad77eb2926de3459dd89547bf149da,
     type: 3}
-  UntouchableMedal: {fileID: 5438404950233263885, guid: d5ed2dada7184de4d894064c5250c563,
+  UntouchableMedal: {fileID: 4700125866049410579, guid: a26f6e243e5bab84aa02c8a6c757fe70,
     type: 3}
   totalMedalCounts: 00000000000000000000000000000000
   medalCounts:
@@ -64,6 +64,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  bonusStatCounts: []
+  statsDash: 0
+  statsPowerups: 0
+  statsStuns: 0
+  statsGames: 0
 --- !u!114 &503474325
 MonoBehaviour:
   m_ObjectHideFlags: 0
